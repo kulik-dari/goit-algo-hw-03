@@ -1,0 +1,631 @@
+/* ==================== CAREERS PAGE CSS ==================== */
+
+/* Base styles with proper z-index and positioning */
+
+  
+  /* Fixed menu and navigation */
+ 
+  
+  /* Main section styles */
+  .first-section {
+    background: linear-gradient(165deg, #F8FAFC 0%, #EEF2FF 50%, #F5F3FF 100%);
+    padding: 6rem 4rem;
+    border-radius: 3rem;
+    margin: 5rem 8rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .first-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .first-section p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .announcement {
+    background: linear-gradient(165deg, #F8FAFC 0%, #EEF2FF 50%, #F5F3FF 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 640px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+  
+  .announcement p {
+    margin-bottom: 0;
+  }
+  
+  /* Job openings section */
+  .job-openings {
+    margin: 4rem 8rem;
+    background: url('https://img.freepik.com/premium-photo/abstract-blurred-sky-colorful_40299-22.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 3rem;
+    padding: 4rem 3rem;
+    text-align: center;
+    min-height: 300px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-openings h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .no-positions {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .no-positions p {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .no-positions p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Additional services section */
+  .additional-services {
+    padding: 5rem 3rem;
+    background: linear-gradient(165deg, #F8FAFC 0%, #EEF2FF 50%, #F5F3FF 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3rem;
+    margin: 4rem 8rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .additional-services .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1E293B;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  .service-card {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    height: 100%;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+    border-color: rgba(148, 163, 184, 0.2);
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .service-card:hover::before {
+    opacity: 1;
+  }
+  
+  .service-card h3 {
+    color: #1E293B;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.01em;
+  }
+  
+  .service-card p {
+    color: #64748B;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  /* Contact section */
+  .contact {
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5rem;
+  }
+  
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    font-weight: 600;
+  }
+  
+  .contact p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .contact a {
+    color: #186aff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .contact a:hover {
+    color: #0047cc;
+    text-decoration: underline;
+  }
+  
+  /* Mobile Book Demo Button */
+  .mobile-book-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 280px;
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .mobile-book-btn button {
+    background: #186aff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(24, 106, 255, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .mobile-book-btn button:hover {
+    background: #0056e0;
+  }
+  
+  .mobile-book-btn button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .first-section {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .job-openings {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.2s;
+  }
+  
+  .additional-services {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.4s;
+  }
+  
+  .contact {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.6s;
+  }
+  
+  /* ==================== RESPONSIVE STYLES ==================== */
+  
+  /* Larger Tablets/Small Desktops */
+  @media (max-width: 1200px) {
+    .first-section {
+      margin: 5rem 4rem;
+      padding: 4rem 3rem;
+    }
+    
+    .job-openings,
+    .additional-services {
+      margin: 4rem 4rem;
+    }
+  }
+  
+  /* Tablets */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .section-star {
+      margin-top: 70px !important;
+    }
+    
+    .first-section {
+      margin: 4rem 2rem !important;
+      padding: 3rem 2rem !important;
+      border-radius: 2rem !important;
+    }
+    
+    .first-section h1 {
+      font-size: 2.25rem;
+    }
+    
+    .first-section p {
+      font-size: 1.1rem;
+    }
+    
+    .announcement {
+      padding: 1.5rem;
+    }
+    
+    .job-openings,
+    .additional-services {
+      margin: 3rem 2rem !important;
+      padding: 3rem 2rem !important;
+      border-radius: 2rem !important;
+    }
+    
+    .job-openings h2 {
+      font-size: 2.25rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    
+    .section-title {
+      font-size: 2.25rem;
+    }
+    
+    .service-card {
+      padding: 1.75rem;
+    }
+    
+    .mobile-book-btn {
+      display: block !important;
+    }
+    
+    .nav-item-demo {
+      display: none !important;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    .section-star {
+      margin-top: 60px !important;
+    }
+    
+    .first-section {
+      margin: 2rem 1rem !important;
+      padding: 2rem 1.5rem !important;
+      border-radius: 1.5rem !important;
+    }
+    
+    .first-section h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .first-section p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .announcement {
+      padding: 1.5rem;
+      max-width: 100%;
+      border-radius: 0.75rem;
+      margin: 0 0.5rem;
+    }
+    
+    .job-openings {
+      margin: 2rem 1rem !important;
+      padding: 2rem 1.5rem !important;
+      border-radius: 1.5rem !important;
+      min-height: auto;
+    }
+    
+    .job-openings h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .no-positions {
+      padding: 1.5rem;
+      width: 100%;
+      max-width: none;
+      border-radius: 0.75rem;
+    }
+    
+    .no-positions p {
+      font-size: 1rem;
+    }
+    
+    .additional-services {
+      margin: 2rem 1rem !important;
+      padding: 2rem 1.5rem !important;
+      border-radius: 1.5rem !important;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .service-card {
+      padding: 1.5rem;
+    }
+    
+    .service-card h3 {
+      font-size: 1.3rem;
+    }
+    
+    .contact {
+      padding: 2rem 1.5rem;
+      margin-bottom: 4rem;
+    }
+    
+    .contact h2 {
+      font-size: 1.6rem;
+    }
+    
+    .contact p {
+      font-size: 1rem;
+    }
+    
+    .mobile-book-btn {
+      display: block !important;
+      bottom: 15px !important;
+    }
+    
+    .nav-item-demo {
+      display: none !important;
+    }
+  }
+  
+  /* Small Mobile Devices */
+  @media (max-width: 480px) {
+    .first-section {
+      padding: 1.75rem 1.25rem !important;
+      margin: 2rem 0.75rem !important;
+      border-radius: 1.25rem !important;
+    }
+    
+    .first-section h1 {
+      font-size: 1.6rem;
+    }
+    
+    .announcement {
+      padding: 1.25rem;
+    }
+    
+    .job-openings {
+      margin: 2rem 0.75rem !important;
+      padding: 1.75rem 1.25rem !important;
+      border-radius: 1.25rem !important;
+    }
+    
+    .job-openings h2 {
+      font-size: 1.6rem;
+    }
+    
+    .no-positions {
+      width: 100%;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+    }
+    
+    .no-positions p {
+      font-size: 0.95rem;
+    }
+    
+    .additional-services {
+      margin: 2rem 0.75rem !important;
+      padding: 1.75rem 1.25rem !important;
+      border-radius: 1.25rem !important;
+    }
+    
+    .section-title {
+      font-size: 1.6rem;
+    }
+    
+    .service-card {
+      padding: 1.25rem;
+    }
+    
+    .service-card h3 {
+      font-size: 1.2rem;
+    }
+    
+    .mobile-book-btn {
+      width: 90% !important;
+      bottom: 12px !important;
+    }
+    
+    .mobile-book-btn button {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Fix for iOS Safari */
+  @supports (-webkit-touch-callout: none) {
+    .section-star {
+      background-attachment: scroll !important;
+    }
+    
+    .first-section,
+    .job-openings,
+    .additional-services {
+      background-attachment: scroll !important;
+    }
+    
+    .mobile-book-btn {
+      bottom: 25px !important;
+      padding-bottom: 15px !important;
+    }
+    
+    /* Add extra padding to the bottom of the page for iOS */
+    body {
+      padding-bottom: 70px;
+    }
+  }
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .first-section,
+    .job-openings,
+    .additional-services,
+    .contact {
+      animation: none !important;
+      opacity: 1 !important;
+    }
+    
+    .service-card {
+      transition: none !important;
+    }
+    
+    .service-card:hover {
+      transform: none !important;
+    }
+  }
+  
+  /* Touch Device Optimizations */
+  @media (hover: none) {
+    .service-card:hover {
+      transform: none;
+    }
+    
+    .service-card:active {
+      transform: translateY(-2px);
+    }
+    
+    .service-card::before {
+      display: none;
+    }
+    
+    .mobile-book-btn button {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Improve touch targets */
+    .contact a {
+      padding: 6px 0;
+      display: inline-block;
+    }
+  }
+  
+  /* High-DPI Screen Support */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .first-section h1,
+    .job-openings h2,
+    .section-title,
+    .service-card h3,
+    .contact h2 {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .mobile-book-btn {
+      display: none !important;
+    }
+    
+    .first-section,
+    .job-openings,
+    .additional-services {
+      margin: 1rem 0 !important;
+      padding: 1rem !important;
+      box-shadow: none !important;
+      background: none !important;
+      border: 1px solid #ccc !important;
+    }
+    
+    .service-card {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }

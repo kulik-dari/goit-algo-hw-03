@@ -1,0 +1,326 @@
+<!-- Updated careers.html with SEO and layout fixes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Improved SEO Meta Tags -->
+    <meta name="description" content="Join CyberXYZ's team of cybersecurity experts. Explore career opportunities in digital security, incident response, and threat intelligence. Remote-first culture with competitive benefits.">
+    <meta name="keywords" content="cybersecurity careers, cybersecurity jobs, information security careers, CyberXYZ careers, remote cybersecurity jobs, security analyst jobs">
+    <meta name="author" content="CyberXYZ">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Careers at CyberXYZ - Join Our Cybersecurity Team">
+    <meta property="og:description" content="Join our team of security experts and innovators. We offer competitive benefits, remote-first culture, and opportunities for professional growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cyberxyz.io/careers.html">
+    <meta property="og:image" content="https://www.cyberxyz.io/images/careers-og-image.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Careers at CyberXYZ - Join Our Cybersecurity Team">
+    <meta name="twitter:description" content="Join our cybersecurity team. Remote-first culture and competitive benefits.">
+    <meta name="twitter:image" content="https://www.cyberxyz.io/images/careers-og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cyberxyz.io/careers.html">
+    
+    <title>Careers at CyberXYZ - Join Our Cybersecurity Team</title>
+    
+    <!-- Bootstrap.min css -->
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/careers.css">
+
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fix for menu overflow -->
+    <style>
+        /* Critical fixes for menu and layout issues */
+        .section-menu {
+            position: relative;
+            z-index: 9999;
+            margin-bottom: 0;
+        }
+        
+        .section-star {
+            position: relative;
+            z-index: 1;
+            margin-top: 80px; /* Add space for menu */
+        }
+        
+        .first-section {
+            position: relative;
+            z-index: 2;
+            margin-top: 0;
+            padding-top: 120px;
+        }
+        
+        /* Fix mobile layout issues */
+        @media (max-width: 768px) {
+            .section-star {
+                margin-top: 60px;
+            }
+            
+            .first-section {
+                margin: 2rem 1rem !important;
+                padding: 3rem 1.5rem !important;
+                border-radius: 2rem !important;
+            }
+            
+            .job-openings,
+            .additional-services {
+                margin: 2rem 1rem !important;
+                padding: 2rem 1.5rem !important;
+                border-radius: 2rem !important;
+            }
+            
+            .no-positions {
+                width: 100% !important;
+                min-width: auto !important;
+                padding: 1.5rem !important;
+            }
+            
+            /* Fix the nav menu position */
+            nav#menu {
+                position: fixed !important;
+                top: 10px !important;
+            }
+            
+            /* Fix Book Demo button position */
+            .mobile-demo-btn {
+                position: fixed !important;
+                bottom: 20px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                z-index: 9999 !important;
+                width: 80% !important;
+                max-width: 300px !important;
+            }
+        }
+        
+        /* Fix tablet layout */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .section-star {
+                margin-top: 70px;
+            }
+            
+            .first-section {
+                margin: 4rem 2rem !important;
+                padding: 4rem 2rem !important;
+                border-radius: 3rem !important;
+            }
+            
+            .job-openings,
+            .additional-services {
+                margin: 3rem 2rem !important;
+                padding: 3rem 2rem !important;
+                border-radius: 3rem !important;
+            }
+        }
+        
+        /* Fix Book Demo button for mobile/tablet */
+        .nav-item-demo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+        
+        @media (max-width: 1024px) {
+            .nav-item-demo {
+                display: none !important;
+            }
+            
+            /* Custom Book Demo button for mobile */
+            .mobile-book-btn {
+                display: block;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                max-width: 280px;
+                z-index: 9999;
+                text-align: center;
+            }
+            
+            .mobile-book-btn button {
+                background: #186aff;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 12px 24px;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 500;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section-menu"></div>
+    <section class="section-star"></section>
+    
+    <div class="first-section">
+        <h1>Careers at CyberXYZ</h1>
+        <p>Join our team of security experts and innovators as we work to create cutting-edge cybersecurity solutions that protect businesses in an evolving digital landscape.</p>
+        <div class="announcement">
+            <p>We offer competitive benefits, remote-first culture, and opportunities for professional growth. Be part of a team that's making a real difference in cybersecurity.</p>
+        </div>
+    </div>
+
+    <section class="job-openings">
+        <h2>Current Openings</h2>
+        <div class="no-positions">
+            <p>We don't have any open positions at the moment.</p>
+            <p>Please check back later for new opportunities, or follow us on LinkedIn for the latest updates.</p>
+        </div>
+    </section>
+
+    <section class="additional-services">
+        <div class="container">
+            <h2 class="section-title">Why Join CyberXYZ?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Innovation First</h3>
+                    <p>Work with cutting-edge technologies and contribute to solving complex security challenges in a rapidly evolving landscape.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Growth Opportunities</h3>
+                    <p>Access continuous learning programs, certifications, and mentorship to advance your career in cybersecurity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Remote-First Culture</h3>
+                    <p>Enjoy the flexibility of working from anywhere while staying connected with our collaborative and supportive team.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Competitive Benefits</h3>
+                    <p>Comprehensive health coverage, retirement plans, flexible PTO, and other modern workplace benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <h2>Stay Connected</h2>
+        <p>Follow us on social media or email <a href="mailto:careers@cyberxyz.com">careers@cyberxyz.com</a> to learn about future opportunities.</p>
+    </section>
+
+    <!-- Add mobile-only Book Demo button -->
+    <div class="mobile-book-btn" id="mobile-book-btn">
+        <button onclick="openModal()">Book Demo</button>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- main script -->
+    <script src="js/script.js"></script>
+    <script src="js/stars.js"></script>
+    <script src="components/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!-- Fix menu layout issues -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fix menu z-index and positioning
+        const menuSection = document.querySelector('.section-menu');
+        if (menuSection) {
+            menuSection.style.zIndex = '9999';
+            menuSection.style.position = 'relative';
+        }
+        
+        // Fix star section position
+        const starSection = document.querySelector('.section-star');
+        if (starSection) {
+            starSection.style.marginTop = '80px';
+            starSection.style.position = 'relative';
+            starSection.style.zIndex = '1';
+        }
+        
+        // Handle mobile book demo button visibility
+        function updateBookDemoButton() {
+            const mobileBtn = document.getElementById('mobile-book-btn');
+            if (mobileBtn) {
+                if (window.innerWidth <= 1024) {
+                    mobileBtn.style.display = 'block';
+                } else {
+                    mobileBtn.style.display = 'none';
+                }
+            }
+        }
+        
+        // Initial call and add resize listener
+        updateBookDemoButton();
+        window.addEventListener('resize', updateBookDemoButton);
+        
+        // Fix first section positioning on mobile
+        function adjustLayout() {
+            const firstSection = document.querySelector('.first-section');
+            if (firstSection && window.innerWidth <= 768) {
+                firstSection.style.marginTop = '0';
+            }
+        }
+        
+        // Call initially and on resize
+        adjustLayout();
+        window.addEventListener('resize', adjustLayout);
+    });
+    </script>
+
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CyberXYZ",
+      "url": "https://www.cyberxyz.io",
+      "logo": "https://www.cyberxyz.io/images/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/cyberxyz/",
+        "https://x.com/cyberxyz_io",
+        "https://github.com"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "contact@cyberxyz.io"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EmployerAggregateRating",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "CyberXYZ",
+        "sameAs": "https://www.cyberxyz.io"
+      },
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "45"
+    }
+    </script>
+</body>
+</html>

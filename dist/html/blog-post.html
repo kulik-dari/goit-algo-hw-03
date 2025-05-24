@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber XYZ - Blog Post</title> <!-- Title will be updated dynamically -->
+  <meta name="description" content="Blog post from Cyber XYZ.">
+
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Component Styles -->
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/stars.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/nobackground.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <style>
+    /* Progress Bar Styles */
+    #reading-progress-bar {
+      position: fixed;
+      top: 0; /* At the very top */
+      left: 0;
+      width: 0%;
+      height: 5px; /* Height of the progress bar */
+      background-color: #007bff; /* Progress bar color */
+      z-index: 1001; /* Above menu */
+      transition: width 0.1s ease-out;
+    }
+
+    /* Style for the page header section */
+    .page-header-section {
+      padding-top: 120px; /* Space below fixed menu */
+      padding-bottom: 40px;
+      background-color: #e9ecef; /* Light background, adjust as needed */
+      text-align: center;
+    }
+    .page-header-section h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 0;
+    }
+
+    /* Main Content Area Styles */
+    .blog-post-section {
+      padding-top: 60px; /* Space below page header */
+      padding-bottom: 60px;
+    }
+
+    .blog-post-layout {
+      display: flex;
+      gap: 40px; /* Space between sidebar and content */
+      max-width: 1100px; /* Wider container for sidebar */
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* Author Sidebar */
+    .blog-author-sidebar {
+      flex: 0 0 200px; /* Fixed width for sidebar */
+      text-align: center;
+    }
+    .author-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #ccc; /* Placeholder color */
+      margin: 0 auto 15px auto;
+      /* Use background-image for actual photo */
+      /* background-image: url('path/to/author.jpg'); */
+      background-size: cover;
+      background-position: center;
+    }
+    .author-name {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .author-title {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 15px;
+    }
+    .author-bio {
+      font-size: 0.85rem;
+      color: #495057;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    /* Main Content Container */
+    .blog-post-container {
+      flex-grow: 1; /* Allow content to take remaining space */
+      background-color: #fff; /* Optional: background for content area */
+      padding: 30px 40px; /* Padding inside the content area */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Optional: subtle shadow */
+      border-radius: 8px; /* Optional: rounded corners */
+      max-width: 800px; /* Keep content readable */
+    }
+
+    /* Back Link */
+    .back-to-blog-link {
+        display: inline-block;
+        margin-bottom: 25px;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .back-to-blog-link:hover {
+        text-decoration: underline;
+    }
+
+    .blog-post-title { /* Keep this specific for the post title */
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .blog-post-meta {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .blog-post-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #343a40;
+    }
+
+    .blog-post-content h2,
+    .blog-post-content h3 {
+      margin-top: 2em;
+      margin-bottom: 0.8em;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+     .blog-post-content h2 { font-size: 1.8rem; }
+     .blog-post-content h3 { font-size: 1.5rem; }
+
+    .blog-post-content p {
+      margin-bottom: 1.2em;
+    }
+
+    .blog-post-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 1.5em 0;
+      border-radius: 5px;
+    }
+
+    .blog-post-content a {
+      color: #007bff;
+      text-decoration: underline;
+    }
+    .blog-post-content a:hover {
+      color: #0056b3;
+    }
+
+    /* Ensure menu doesn't overlap */
+     .section-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Below progress bar */
+     }
+
+     /* Responsive adjustments */
+     @media (max-width: 992px) {
+        .blog-post-layout {
+            flex-direction: column;
+            max-width: 800px; /* Revert to single column max-width */
+        }
+        .blog-author-sidebar {
+            flex: 0 0 auto; /* Reset flex basis */
+            width: 100%; /* Full width */
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+     }
+     @media (max-width: 768px) {
+        .page-header-section h1 { font-size: 2.2rem; }
+        .blog-post-title { font-size: 1.8rem; }
+        .blog-post-content { font-size: 1rem; line-height: 1.7; }
+        .blog-post-container { padding: 20px; }
+     }
+
+  </style>
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress-bar"></div>
+
+    <!-- Menu container -->
+    <div class="section-menu"></div>
+
+    <!-- Page Header Section -->
+    <section class="page-header-section">
+        <div class="container">
+             <h1 id="page-title">Blog Post Title Placeholder</h1>
+             <!-- Optional: Add breadcrumbs or post meta here -->
+        </div>
+    </section>
+
+    <!-- Blog Post Content Area -->
+    <section class="blog-post-section">
+        <div class="blog-post-layout">
+            <!-- Author Sidebar -->
+            <aside class="blog-author-sidebar">
+                <div class="author-photo"></div>
+                <div class="author-name">Author Name</div>
+                <div class="author-title">Job Title</div>
+                <div class="author-bio">
+                    Short author bio goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="blog-post-container" id="blog-content-area">
+                <a href="blog.html" class="back-to-blog-link">← Back to Blogs</a>
+                <!-- Content will be loaded here dynamically or statically -->
+                <!-- Removed title from here as it's in the header section now -->
+                <div class="blog-post-meta">
+                    <span>Posted on <span id="post-date">January 1, 2024</span></span>
+                    <!-- Removed Author from here, now in sidebar -->
+                </div>
+                <div class="blog-post-content">
+                    <p>This is placeholder content for the blog post. Replace this with the actual content fetched based on the blog post ID.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                    <h2>A Subheading Example</h2>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.</p>
+                    <img src="https://via.placeholder.com/720x400" alt="Placeholder Image">
+                    <h3>Another Subheading</h3>
+                    <p>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer container -->
+    <footer id="footer"></footer>
+
+  <!-- Essential Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Component Scripts -->
+  <script src="components/menu.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/stars.js"></script>
+
+  <!-- Progress Bar & Content Loading Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const progressBar = document.getElementById('reading-progress-bar');
+      const contentArea = document.getElementById('blog-content-area');
+      const pageTitleElement = document.getElementById('page-title');
+
+      // --- Progress Bar Logic ---
+      if (progressBar && contentArea) {
+        const updateProgressBar = () => {
+          const contentRect = contentArea.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          const scrollStart = contentRect.top < windowHeight;
+          const scrollEnd = contentRect.bottom < 0;
+
+          if (!scrollStart || scrollEnd) {
+            progressBar.style.width = scrollEnd ? '100%' : '0%';
+            return;
+          }
+          const scrolled = windowHeight - contentRect.top;
+          // Use scrollHeight of the content area for total height
+          const totalHeight = contentArea.scrollHeight;
+          const progress = Math.min(Math.max((scrolled / totalHeight) * 100, 0), 100);
+          progressBar.style.width = `${progress}%`;
+        };
+        window.addEventListener('scroll', updateProgressBar, { passive: true });
+        window.addEventListener('resize', updateProgressBar, { passive: true });
+        updateProgressBar(); // Initial call
+      }
+
+      // --- Placeholder Content Update Logic ---
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('id');
+
+      if (pageTitleElement && postId) {
+         pageTitleElement.textContent = `Blog Post ${postId}`; // Placeholder title update
+         document.title = `Cyber XYZ - Blog Post ${postId}`;
+         // TODO: Fetch and display actual post data, author data, etc. based on postId
+      } else if (pageTitleElement) {
+         pageTitleElement.textContent = 'Blog Post Not Found';
+      }
+    });
+  </script>
+
+</body>
+</html>

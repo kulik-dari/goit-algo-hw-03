@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>New Contact Form Submission</h2>
+    <p>Name: {{ contact.firstname }} {{ contact.lastname }}</p>
+    <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone|default:"Not provided" }}</p>
+    <p>Operating System: {{ contact.os }}</p>
+    <p>Company Size: {{ contact.company_size }}</p>
+    <p>Interests: {{ interests }}</p>
+</body>
+</html>

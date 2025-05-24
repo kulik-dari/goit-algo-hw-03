@@ -1,0 +1,195 @@
+/* Stars page area */
+/* Banner styles */
+.page-banner-area {
+    position: relative;
+    background: black;
+    color: orange;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    min-height: 400px;
+    z-index: 2;
+  }
+  
+  .overlay.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .bg-about-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  #stars, #stars2, #stars3, #stars4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .styleabout {
+    text-align: center;
+    position: absolute;
+    top: 60%; /* Changed to exactly 50% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .text-white {
+    color: white;
+  }
+  
+  .iconabout {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .styleabout h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .styleabout p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .iconabout ion-icon {
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .iconabout ion-icon:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .stara {
+    position: absolute;
+    background-color: #FFA500;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.7);
+    animation: twinkle 3s infinite;
+  }
+  
+  @keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(360deg);
+    }
+  }
+  
+  #stars .star {
+    animation-duration: 3s;
+  }
+  
+  #stars2 .star {
+    animation-duration: 3.5s;
+  }
+  
+  #stars3 .star {
+    animation-duration: 4s;
+  }
+  
+  #stars4 .star {
+    animation-duration: 4.5s;
+  }
+  
+  /* Navigation styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .page-banner-area {
+        height: 50vh;
+    }
+  
+  
+    .star {
+        box-shadow: 0 0 5px 1px rgba(255, 165, 0, 0.7);
+    }
+  
+    .styleabout h1 {
+        font-size: 2rem;
+    }
+  
+    .styleabout p {
+        font-size: 1rem;
+    }
+  
+    .nav-links {
+        display: none;
+    }
+  
+    .navbar {
+        padding: 1rem;
+    }
+  }

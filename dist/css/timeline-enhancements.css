@@ -1,0 +1,585 @@
+/* Timeline Enhancements */
+
+/* Timeline blue colors - matching button blue */
+.timeline::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 4px !important;
+  background: linear-gradient(to bottom, #186aff, #1254cc) !important; /* Match button blue color */
+  transform: translateX(-50%) !important;
+  z-index: 1 !important;
+  box-shadow: 0 0 15px rgba(24, 106, 255, 0.2) !important; /* Subtle glow effect */
+}
+
+/* Make timeline wider */
+.timeline {
+  max-width: 1000px !important; /* Wider timeline */
+  width: 100% !important;
+  background-color: transparent !important; /* Remove background color */
+  position: relative !important;
+  padding: 3rem 0 !important;
+  margin: 0 auto !important;
+}
+
+/* Timeline title styling */
+.timeline__content-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #2563eb !important; /* Blue color */
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.75rem !important;
+  display: block !important; /* Ensure it's visible */
+  position: relative !important;
+  z-index: 1 !important; /* Make sure it's above other elements */
+  max-width: 100% !important; /* Prevent overflow */
+  word-wrap: break-word !important; /* Allow long titles to wrap */
+  overflow: visible !important; /* Ensure content is visible */
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* Timeline logo image - prevent stretching */
+.timeline-logo img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: contain !important; /* Prevent stretching */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* Timeline features list icons */
+.timeline-features-list i {
+  color: #2563eb !important; /* Darker blue for timeline icons */
+  margin-right: 0.6rem !important;
+  background-color: rgba(37, 99, 235, 0.1) !important; /* Light blue background */
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Apple-inspired timeline item content design */
+.timeline-item__content {
+  overflow: visible !important;
+  width: 100% !important;
+  max-width: 420px !important; /* Slightly narrower for better spacing */
+  box-sizing: border-box !important;
+  padding: 1.75rem 2rem !important;
+  position: relative !important;
+  display: block !important;
+  border-radius: 20px !important; /* Apple-style rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06) !important; /* Subtle shadow */
+  border: none !important;
+  background-color: #ffffff !important;
+  z-index: 2 !important;
+  transition: all 0.3s ease !important;
+  margin-top: 1.5rem !important; /* Space from top to avoid overlapping with milestone */
+}
+
+.timeline-item__content:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Add spacing for odd items (left side) */
+.timeline-item:nth-child(odd) .timeline-item__content {
+  margin-right: 90px !important; /* Increased margin to push further right */
+  margin-left: 30px !important;
+}
+
+/* Add spacing for even items (right side) */
+.timeline-item:nth-child(even) .timeline-item__content {
+  margin-left: 90px !important; /* Increased margin to push further left */
+  margin-right: 30px !important;
+}
+
+.timeline-item {
+  overflow: visible !important;
+  width: 100% !important; /* Full width */
+  box-sizing: border-box !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+/* Complete timeline item redesign with Apple-inspired spacing */
+.timeline-item {
+  position: relative !important;
+  display: flex !important;
+  margin-bottom: 9rem !important; /* Increased spacing between items */
+  width: 100% !important;
+  box-sizing: border-box !important;
+  clear: both !important; /* Prevent floating issues */
+  min-height: 220px !important; /* Ensure minimum height for proper title positioning */
+}
+
+/* Odd items (1, 3) - left side */
+.timeline-item:nth-child(odd) {
+  justify-content: flex-start !important;
+  padding-right: 50% !important;
+  padding-left: 0 !important;
+}
+
+/* Even items (2, 4) - right side */
+.timeline-item:nth-child(even) {
+  justify-content: flex-end !important;
+  padding-left: 50% !important;
+  padding-right: 0 !important;
+}
+
+/* Position titles completely on the opposite side of the timeline from their cards */
+.timeline-item__content {
+  position: relative !important;
+}
+
+/* For odd items (left cards), position titles on the right side of the timeline */
+.timeline-item:nth-child(odd) .timeline__content-title {
+  position: absolute !important;
+  right: -450px !important; /* Pushed much further right - opposite of milestone */
+  top: 20px !important;
+  width: 350px !important; /* Extra wide title element */
+  text-align: left !important;
+  background-color: #eef2ff !important; /* Light blue background like metrics spans */
+  padding: 0.85rem 1.5rem !important; /* Increased padding for better visibility */
+  border-radius: 50px !important; /* Fully rounded corners like metrics spans */
+  color: #186aff !important; /* Match button blue color */
+  font-weight: 600 !important; /* Slightly bolder for better visibility */
+  box-shadow: 0 6px 16px rgba(24, 106, 255, 0.12) !important; /* Enhanced shadow for better visibility */
+  z-index: 10 !important;
+  font-size: 1.1rem !important; /* Larger font size for better visibility */
+  white-space: nowrap !important; /* Prevent text wrapping */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  letter-spacing: -0.01em !important; /* Apple-style tight letter spacing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important; /* Apple system font */
+}
+
+/* For even items (right cards), position titles on the left side of the timeline */
+.timeline-item:nth-child(even) .timeline__content-title {
+  position: absolute !important;
+  left: -450px !important; /* Pushed much further left - opposite of milestone */
+  top: 20px !important;
+  width: 350px !important; /* Extra wide title element */
+  text-align: right !important;
+  background-color: #eef2ff !important; /* Light blue background like metrics spans */
+  padding: 0.85rem 1.5rem !important; /* Increased padding for better visibility */
+  border-radius: 50px !important; /* Fully rounded corners like metrics spans */
+  color: #186aff !important; /* Match button blue color */
+  font-weight: 600 !important; /* Slightly bolder for better visibility */
+  box-shadow: 0 6px 16px rgba(24, 106, 255, 0.12) !important; /* Enhanced shadow for better visibility */
+  z-index: 10 !important;
+  font-size: 1.1rem !important; /* Larger font size for better visibility */
+  white-space: nowrap !important; /* Prevent text wrapping */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  letter-spacing: -0.01em !important; /* Apple-style tight letter spacing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important; /* Apple system font */
+}
+
+/* Fix timeline content alignment for all items - Apple style */
+.timeline__content-desc {
+  text-align: left !important; /* Always left-align description text */
+  position: relative !important;
+  z-index: 2 !important;
+  margin-top: 0 !important; /* No extra space needed */
+  color: #64748b !important; /* Subtle text color */
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Add a subtle header to each timeline content */
+.timeline__content-desc-new {
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: none !important; /* No border for cleaner look */
+}
+
+.timeline__content-desc-new strong {
+  color: #186aff !important; /* Match button blue color */
+  font-size: 0.95rem !important; /* Larger font size for better visibility */
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important; /* Bolder for better visibility */
+  opacity: 1 !important; /* Full opacity for better visibility */
+  display: inline-block !important;
+  margin-bottom: 0.5rem !important; /* Add some space below */
+  background-color: rgba(24, 106, 255, 0.08) !important; /* Very subtle blue background */
+  padding: 0.4rem 0.8rem !important; /* Add padding for emphasis */
+  border-radius: 4px !important; /* Slightly rounded corners */
+}
+
+/* Fix timeline features list alignment */
+.timeline-features-list {
+  padding-left: 0 !important;
+  list-style-type: none !important;
+  margin-top: 1.5rem !important;
+}
+
+.timeline-features-list li {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.timeline-features-list li span {
+  margin-left: 0.75rem !important;
+  color: #64748b !important; /* Subtle gray for text */
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+}
+
+.timeline-features-list li i {
+  color: #186aff !important; /* Match button blue color */
+  font-size: 0.8rem !important;
+}
+
+/* Fix timeline container layout - Apple-inspired */
+.timeline-container {
+  padding: 6rem 3rem !important; /* More horizontal padding */
+  background-color: #f9fafb !important; /* Lighter background */
+  position: relative !important;
+  overflow: visible !important; /* Allow content to be visible */
+  border-radius: 30px !important; /* More rounded corners */
+  margin: 5rem 0 !important;
+  box-shadow: none !important; /* No shadow for clean look */
+  border: 1px solid #f1f5f9 !important; /* Subtle border */
+}
+
+.timeline-header {
+  text-align: center !important;
+  margin-bottom: 4rem !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.timeline-header__title {
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  margin-bottom: 1rem !important;
+}
+
+.timeline-header__subtitle {
+  font-size: 1.125rem !important;
+  color: #4b5563 !important;
+  line-height: 1.6 !important;
+}
+
+/* Fix timeline milestone positioning - matching button blue */
+.timeline-milestone {
+  position: absolute !important;
+  z-index: 3 !important; /* Above the timeline line */
+  width: 36px !important; /* Slightly smaller */
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #186aff, #1254cc) !important; /* Match button blue color */
+  color: white !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: bold !important;
+  box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(24, 106, 255, 0.3) !important;
+  top: 20px !important;
+  font-size: 1rem !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.timeline-milestone.visible {
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 0 4px white, 0 0 20px rgba(24, 106, 255, 0.4) !important;
+}
+
+/* Position milestones on the opposite side of content divs */
+.timeline-item:nth-child(odd) .timeline-milestone {
+  left: calc(50% - 50px) !important; /* Push further left away from timeline */
+  right: auto !important;
+}
+
+.timeline-item:nth-child(even) .timeline-milestone {
+  right: calc(50% - 50px) !important; /* Push further right away from timeline */
+  left: auto !important;
+}
+
+/* Add more space between milestone and title */
+.timeline-item:nth-child(odd) .timeline-milestone ~ .timeline-item__content {
+  margin-right: 70px !important; /* More space on right side */
+}
+
+.timeline-item:nth-child(even) .timeline-milestone ~ .timeline-item__content {
+  margin-left: 70px !important; /* More space on left side */
+}
+
+/* Add connecting lines from milestone to content */
+.timeline-item::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 38px !important;
+  width: 50px !important; /* Longer connecting line */
+  height: 2px !important;
+  background-color: rgba(24, 106, 255, 0.3) !important; /* Match button blue color */
+  z-index: 1 !important;
+}
+
+/* Adjust connecting lines to match new milestone positions */
+.timeline-item:nth-child(odd)::after {
+  right: calc(50% - 90px) !important; /* Connect from right side - longer */
+  left: auto !important;
+  width: 70px !important; /* Longer connecting line */
+}
+
+.timeline-item:nth-child(even)::after {
+  left: calc(50% - 90px) !important; /* Connect from left side - longer */
+  right: auto !important;
+  width: 70px !important; /* Longer connecting line */
+}
+
+/* Fix timeline content alignment */
+.timeline__content-desc {
+  overflow: visible !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Timeline stats */
+.timeline-stat {
+  background-color: #dbeafe !important; /* Light blue background */
+  color: #1d4ed8 !important; /* Darker blue text */
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Add rounded edges to security impact stories section */
+.security-credentials.success-stories {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  padding: 4rem 2rem !important;
+}
+
+/* Add rounded edges to story cards */
+.credential-item.story-card {
+  border-radius: 12px !important;
+  overflow: visible !important; /* Prevent content from being cut off */
+  padding: 2rem !important;
+  height: auto !important; /* Allow natural height */
+  min-height: 350px !important; /* Ensure consistent height */
+}
+
+/* Fix metrics display */
+.credential-item.story-card .metrics {
+  margin-top: auto !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+.credential-item.story-card .metrics span {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  padding: 0.75rem 1.25rem !important;
+  background: #eef2ff !important; /* Light blue background */
+  border-radius: 50px !important; /* Fully rounded corners */
+  color: #4f46e5 !important; /* Indigo text color */
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 0.95rem !important;
+}
+
+/* Stats section enhancements - Apple-inspired */
+.stats {
+  margin-top: 6rem !important; /* Push down by increasing top margin */
+  padding: 4rem 2rem !important; /* More vertical padding */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 24px !important; /* More rounded edges - Apple style */
+  background: linear-gradient(to bottom, #f8f9ff, #ffffff) !important; /* Subtle gradient background */
+  border: 1px solid rgba(0, 0, 0, 0.03) !important; /* Very subtle border */
+}
+
+.stats::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 15% !important; /* Start gradient from 15% - Apple style */
+  right: 15% !important; /* End gradient at 85% - Apple style */
+  height: 3px !important; /* Slightly thinner line - Apple style */
+  background: linear-gradient(to right, #186aff, #1254cc) !important; /* Match button blue gradient */
+  border-radius: 1.5px !important; /* Rounded edges for the line */
+}
+
+.stat-item h3 {
+  color: #186aff !important; /* Match button blue color */
+  text-shadow: none !important; /* Apple doesn't use text shadows */
+  font-weight: 600 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.02em !important; /* Apple-style tight letter spacing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Security resources section - Apple-inspired */
+.security-resources {
+  position: relative !important;
+  border-radius: 24px !important; /* More rounded edges - Apple style */
+  overflow: hidden !important;
+  padding: 5rem 2rem !important; /* More vertical padding */
+  background-color: #f5f7ff !important; /* Very light blue background */
+  margin: 6rem 2rem 4rem !important; /* Add horizontal margin and increase top margin */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04) !important; /* Subtle shadow - Apple style */
+}
+
+.security-resources::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important; /* Move to top - Apple style */
+  left: 15% !important; /* Start gradient from 15% - Apple style */
+  right: 15% !important; /* End gradient at 85% - Apple style */
+  height: 3px !important; /* Slightly thinner line - Apple style */
+  background: linear-gradient(to right, #186aff, #1254cc) !important; /* Match button blue gradient */
+  border-radius: 1.5px !important; /* Rounded edges for the line */
+}
+
+.resource-card {
+  padding: 2.5rem 2rem !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03) !important; /* Lighter shadow - Apple style */
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important; /* Apple's smooth animation curve */
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(24, 106, 255, 0.05) !important; /* Very subtle blue border */
+  background-color: white !important;
+}
+
+.resource-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important; /* Full width line - Apple style */
+  right: 0 !important;
+  height: 2px !important; /* Thinner line - Apple style */
+  background: linear-gradient(to right, #186aff, #1254cc) !important; /* Match button blue gradient */
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important; /* Simpler transition - Apple style */
+  border-radius: 1px !important; /* Rounded edges for the line */
+}
+
+.resource-card:hover::before {
+  opacity: 1 !important;
+}
+
+.resource-card:hover {
+  transform: translateY(0) !important; /* No lift - Apple's newer design style */
+  box-shadow: 0 8px 16px rgba(24, 106, 255, 0.08) !important; /* Subtle shadow - Apple style */
+  background-color: #f8faff !important; /* Very subtle blue tint on hover */
+}
+
+.resource-card::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(24, 106, 255, 0.03) !important; /* Very subtle blue overlay */
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+  z-index: -1 !important;
+  border-radius: 16px !important; /* Match card border radius */
+}
+
+.resource-card:hover::after {
+  opacity: 1 !important;
+}
+
+/* Add rounded edges to resource cards - Apple style */
+.resource-card {
+  border-radius: 16px !important; /* Slightly more rounded - Apple style */
+  overflow: hidden !important;
+}
+
+/* Style for resource card links */
+a.resource-card {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block !important;
+  height: 100% !important; /* Ensure the entire card is clickable */
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important; /* Faster, more responsive animation - Apple style */
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Fix resource icon positioning - Apple style */
+.resource-icon {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 64px !important; /* Slightly smaller - Apple style */
+  height: 64px !important; /* Slightly smaller - Apple style */
+  margin-bottom: 1.75rem !important; /* Slightly more spacing - Apple style */
+  color: #186aff !important; /* Match button blue */
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important; /* Apple's smooth animation curve */
+}
+
+.resource-card:hover .resource-icon {
+  transform: scale(1.05) !important; /* More subtle scale effect - Apple style */
+  color: #1254cc !important; /* Slightly darker blue on hover - Apple style */
+}
+
+.resource-icon::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(24, 106, 255, 0.08) !important; /* Lighter blue background - Apple style */
+  border-radius: 50% !important;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important; /* Apple's smooth animation curve */
+  z-index: -1 !important;
+}
+
+.resource-card:hover .resource-icon::after {
+  background: rgba(24, 106, 255, 0.1) !important; /* Slightly more visible on hover - Apple style */
+  transform: scale(1.05) !important; /* More subtle scale effect - Apple style */
+}
+
+.resource-icon i {
+  font-size: 1.75rem !important;
+}
+
+.resource-icon {
+  color: #3b82f6 !important; /* Blue to match timeline */
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.resource-icon::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-radius: 50% !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: -1 !important;
+}
+
+/* Container div enhancements */
+.container .centered-text h2::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 80px !important;
+  height: 3px !important;
+  background: linear-gradient(to right, #3b82f6, #60a5fa) !important;
+  border-radius: 2px !important;
+}

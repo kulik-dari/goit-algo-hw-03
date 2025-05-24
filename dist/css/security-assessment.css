@@ -1,0 +1,230 @@
+/* Security Assessment Modal Styles */
+.assessment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.assessment-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 3rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+.close-assessment {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-assessment:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.assessment-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #DB7F67;
+  font-weight: 700;
+}
+
+.assessment-content p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.assessment-question {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.assessment-question label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #475569;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+#security-assessment-form button {
+  background: #DB7F67;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 2rem auto 0;
+  box-shadow: 0 5px 15px rgba(219, 127, 103, 0.3);
+}
+
+#security-assessment-form button:hover {
+  background: #f79a6b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(219, 127, 103, 0.4);
+}
+
+#assessment-results {
+  text-align: center;
+}
+
+.score-container {
+  margin: 2rem auto;
+  position: relative;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #DB7F67 0%, #f79a6b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(219, 127, 103, 0.3);
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#score-label {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+#recommendations {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#recommendations h4 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(219, 127, 103, 0.2);
+}
+
+#recommendations ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#recommendations li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+#recommendations li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #DB7F67;
+  font-weight: bold;
+}
+
+#get-detailed-report {
+  background: #DB7F67;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(219, 127, 103, 0.3);
+}
+
+#get-detailed-report:hover {
+  background: #f79a6b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(219, 127, 103, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .assessment-content {
+    padding: 2rem;
+    width: 95%;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .score-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 2.5rem;
+  }
+}

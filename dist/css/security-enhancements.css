@@ -1,0 +1,1263 @@
+/* Security Enhancements CSS */
+
+/* Security Credentials Display */
+.security-credentials {
+  background: #f8f9fc; /* Subtle cool gray background */
+  padding: 6rem 2rem;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.credentials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.credential-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  /* Further refined, softer shadow */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 
+              0 4px 8px rgba(0, 0, 0, 0.04), 
+              0 8px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  border: 1px solid #e5e7eb; /* Subtle border for definition */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.credential-item:hover {
+  transform: translateY(-6px); /* Slightly less lift */
+  /* Gently enhance shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 
+              0 8px 16px rgba(0, 0, 0, 0.05), 
+              0 12px 24px rgba(0, 0, 0, 0.04);
+  background-color: #f8faff; /* Very subtle hover background tint */
+}
+
+.credential-item img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+
+.credential-item h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: #374151; /* Softer dark gray */
+  font-weight: 600;
+}
+
+.credential-item p {
+  font-size: 0.95rem;
+  color: #6b7280; /* Medium gray for readability */
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.story-card {
+  text-align: left;
+  padding: 2.5rem;
+  align-items: flex-start;
+}
+
+.story-card img {
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+
+.story-card h3 {
+  text-align: left;
+  font-size: 1.15rem;
+  color: #374151; /* Consistent soft dark gray */
+  width: 100%;
+}
+
+.industry-badge {
+  position: static;
+  background: #eef2ff; /* Light indigo background */
+  color: #4f46e5; /* Indigo text */
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 1;
+  box-shadow: none;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+.metrics span {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.85rem;
+  color: #6b7280; /* Consistent medium gray */
+  font-weight: 400;
+}
+
+/* Threat Intelligence Map */
+.threat-intelligence-map {
+  background: linear-gradient(135deg, #fff0e6 0%, #ffe6d5 100%);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  margin: 4rem 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.threat-intelligence-map h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+}
+
+.map-container {
+  height: 300px;
+  background: url('../images/threat-map-bg.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-pulse {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 100, 100, 0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(255, 100, 100, 0.7);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 10px rgba(255, 100, 100, 0);
+  }
+  100% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(255, 100, 100, 0);
+  }
+}
+
+.threat-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #DB7F67;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Success Stories Section */
+.success-stories {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.success-stories h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.story-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0.5rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+}
+
+.story-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.story-card {
+  position: relative;
+  border-top: 4px solid #3b82f6;
+  padding-top: 2.5rem;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.industry-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.story-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  padding-right: 60px;
+}
+
+.story-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  padding-top: 1rem;
+}
+
+.metrics span {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* Security Resources Hub */
+.security-resources {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 5rem 2rem;
+}
+
+.security-resources h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resource-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+
+.resource-icon {
+  font-size: 2rem;
+  color: #DB7F67;
+  margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.resource-card p {
+  font-size: 1rem;
+  color: #666;
+  flex-grow: 1;
+}
+
+/* Security Assessment Tool - Apple-inspired */
+.security-assessment {
+  background: linear-gradient(135deg, #186aff 0%, #1254cc 100%); /* Match button blue gradient */
+  color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 24px; /* More rounded edges - Apple style */
+  margin: 6rem 2rem 4rem; /* Add horizontal margin and increase top margin */
+  box-shadow: 0 20px 40px rgba(24, 106, 255, 0.15); /* Subtle shadow - Apple style */
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle border */
+}
+
+.security-assessment:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(24, 106, 255, 0.25); /* Enhanced shadow on hover - Apple style */
+}
+
+.security-assessment h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600; /* Apple uses slightly lighter font weights */
+  color: #ffffff;
+  letter-spacing: -0.02em; /* Apple-style tight letter spacing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.security-assessment p {
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white - Apple style */
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: -0.01em; /* Apple-style tight letter spacing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.btn-outline-dark1 {
+  padding: 0.85rem 2.2rem;
+  border: none;
+  color: #ffffff;
+  background: #186aff; /* Solid button blue - Apple style */
+  box-shadow: 0 4px 12px rgba(24, 106, 255, 0.25); /* Blue-tinted shadow */
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500; /* Apple uses lighter font weights */
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); /* Apple's smooth animation curve */
+  text-transform: none; /* Apple doesn't use uppercase text */
+  letter-spacing: -0.01em; /* Apple-style tight letter spacing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-outline-dark1:hover {
+  background-color: #0056e0; /* Slightly darker blue on hover - Apple style */
+  color: #ffffff;
+  transform: translateY(-2px); /* Subtle lift - Apple style */
+  box-shadow: 0 8px 20px rgba(24, 106, 255, 0.35); /* Blue-tinted enhanced shadow */
+}
+
+.btn-outline-dark1:active {
+  transform: translateY(0); /* Press effect - Apple style */
+  background-color: #0046c0; /* Even darker when pressed - Apple style */
+  box-shadow: 0 4px 8px rgba(24, 106, 255, 0.2); /* Reduced shadow when pressed */
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1); /* Faster transition for press effect */
+}
+
+/* Terminal Animation */
+.terminal-container {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-family: monospace;
+  color: #334155;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.terminal-button.red { background: #ff5f56; }
+.terminal-button.yellow { background: #ffbd2e; }
+.terminal-button.green { background: #27c93f; }
+
+.terminal-title {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.terminal-content {
+  height: 200px;
+  overflow: hidden;
+}
+
+.terminal-line {
+  margin: 0;
+  padding: 0.2rem 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(60, end);
+}
+
+.terminal-prompt::before {
+  content: "$ ";
+  color: #8b5cf6;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background: #3b82f6;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Enhanced Timeline */
+.timeline-container {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  margin: 4rem 0;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.timeline-header__title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.timeline-header__subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 4rem 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #c4b5fd, #a78bfa, #8b5cf6);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.timeline-logo {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-logo img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-milestone {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #3b82f6;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.2);
+  opacity: 1;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-item__content {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(149, 117, 205, 0.1);
+  position: relative;
+  border-left: 5px solid #a78bfa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item__content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(149, 117, 205, 0.15);
+}
+
+.timeline__content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5b21b6;
+  margin-bottom: 0.8rem;
+}
+
+.timeline__content-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.timeline__content-desc-new {
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.timeline__content-desc p {
+  margin-bottom: 1rem;
+}
+
+.timeline-features-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0;
+}
+
+.timeline-features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.timeline-features-list i {
+  color: #8b5cf6;
+  margin-right: 0.6rem;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.timeline-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.timeline-stat {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Enhanced Footer */
+.security-footer {
+  background: #1a2942;
+  color: white;
+  padding-top: 2rem;
+}
+
+.security-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.security-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-badge img {
+  height: 30px;
+  width: auto;
+}
+
+.security-guarantee {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(219, 127, 103, 0.2);
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+
+.security-guarantee h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.security-guarantee p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .credentials-container,
+  .threat-stats,
+  .resources-grid {
+    gap: 1rem;
+  }
+  
+  .security-credentials,
+  .threat-intelligence-map {
+    padding: 2rem 1rem;
+    margin: 2rem 0.5rem;
+  }
+  
+  .security-credentials h2,
+  .threat-intelligence-map h3,
+  .success-stories h2,
+  .security-resources h2,
+  .security-assessment h2 {
+    font-size: 1.8rem;
+  }
+  
+  .map-container {
+    height: 200px;
+  }
+  
+  .story-card {
+    flex: 0 0 300px;
+  }
+  
+  .terminal-container {
+    max-width: 100%;
+  }
+}
+
+/* Accessibility Improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus {
+  outline: 3px solid #DB7F67;
+  outline-offset: 2px;
+}
+
+/* Loading Indicator */
+.security-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a2942;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.security-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-shield {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.loader-shield::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/shield-icon.svg') no-repeat center center;
+  background-size: contain;
+  animation: pulse 1.5s infinite;
+}
+
+.loader-text {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.loader-progress {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  height: 100%;
+  background: #DB7F67;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+/* General Styles & Utilities */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #1f2937; /* Darker base text */
+  line-height: 1.6;
+}
+
+h2.section-title {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #111827; /* Very dark gray / near black */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+p.section-subtitle {
+  font-size: 1.125rem; /* 18px */
+  color: #4b5563; /* Medium gray */
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto; /* Center align and add bottom margin */
+}
+
+/* --- Trusted Security Partner Section --- */
+.trusted-partners {
+  background-color: #ffffff; /* Clean white background */
+  padding: 5rem 2rem;
+}
+
+.partner-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem 4rem; /* Row and column gap */
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+}
+
+.partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.partner-item:hover {
+  transform: scale(1.05);
+}
+
+.partner-item img {
+  height: 50px; /* Consistent height */
+  width: auto;
+  max-width: 120px; /* Limit width for logos like PCI */
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  filter: grayscale(50%); /* Slightly desaturate */
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.partner-title {
+  font-size: 0.875rem; /* 14px */
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* --- Success Stories Section --- */
+.success-stories-section {
+  background-color: #f8f9fc; /* Light cool gray background */
+  padding: 6rem 2rem;
+}
+
+.story-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f9faff 100%); /* Subtle gradient background */
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0,0,0,0.03);
+  border: 1px solid #eef2f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.story-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.story-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 1rem;
+  color: #4f46e5; /* Use icon color */
+}
+
+.industry-badge {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: auto; /* Push badge to the right */
+}
+
+.story-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.story-description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+  flex-grow: 1; /* Push metrics down */
+  margin-bottom: 1.5rem;
+}
+
+.story-metrics {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  margin-top: auto; /* Ensure it's at the bottom */
+}
+
+.metric-item {
+  text-align: left;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* --- Timeline Section --- */
+.timeline-container {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline-header__title {
+  font-size: 2.25rem;
+  color: #111827;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-header__subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 0; /* Remove padding here, handled by container */
+  margin: 0 auto;
+  max-width: 900px; /* Slightly narrower */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, #60a5fa, #3b82f6, #1d4ed8); /* Blue gradient for timeline */
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.timeline-logo {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-logo img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.timeline-item {
+  margin: 0 auto 4rem auto; /* Increased bottom margin */
+  position: relative;
+  width: 90%;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+  text-align: left; /* Keep text aligned left for readability */
+}
+
+.timeline-item__content {
+  background: #f8faff; /* Very light blue/purple tint */
+  padding: 2rem; /* Adjusted padding */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  border: 1px solid #e0e7ff; /* Subtle border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item__content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Triangle pointers for timeline items */
+.timeline-item__content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-item__content::before {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f8faff;
+}
+
+.timeline-item:nth-child(even) .timeline-item__content::before {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f8faff transparent transparent;
+}
+
+.timeline__content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb; /* Blue color */
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(37, 99, 235, 0.2);
+  display: block; /* Ensure it's visible */
+  position: relative;
+  z-index: 1; /* Make sure it's above other elements */
+}
+
+.timeline__content-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #374151; /* Darker gray */
+}
+
+.timeline__content-desc-new {
+  font-weight: 600;
+  color: #4f46e5; /* Indigo */
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.timeline-features-list i {
+  color: #2563eb; /* Darker blue for timeline icons */
+  margin-right: 0.6rem;
+  font-size: 1rem;
+  flex-shrink: 0;
+  background-color: rgba(37, 99, 235, 0.1); /* Light blue background */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-stat {
+  background-color: #dbeafe; /* Light blue background */
+  color: #1d4ed8; /* Darker blue text */
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Remove conflicting old styles - adjust as needed */
+/* 
+.credential-item,
+.security-credentials:not(.trusted-partners),
+.credentials-container {
+  /* Styles below might conflict, remove or override if necessary */
+  /* Example: background, padding, shadow, border etc. defined earlier */
+  /* Keep only styles not handled by new classes or general styles */
+/* } */
+
+/* --- Security Assessment Tool --- */
+.security-assessment {
+  background: linear-gradient(to right, #4f46e5, #7c3aed); /* Indigo to Purple gradient */
+  color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 16px;
+  margin: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+}
+
+/* Optional: Add a subtle pattern or graphic element */
+.security-assessment::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0.5;
+  transform: rotate(15deg);
+}
+
+.assessment-content {
+  position: relative; /* Ensure content is above pseudo-elements */
+  z-index: 1;
+}
+
+.assessment-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.assessment-description {
+  font-size: 1.1rem;
+  color: #e0e7ff; /* Light indigo/white */
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.7;
+}
+
+.assessment-button {
+  padding: 1rem 2.5rem;
+  border: none;
+  color: #4f46e5; /* Indigo text */
+  background-color: #ffffff;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.assessment-button:hover {
+  background-color: #f0f2ff; /* Very light hover */
+  color: #3730a3; /* Darker indigo text */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Terminal Animation Section --- */
+
+/* --- Security Resources Hub --- */
+
+/* Ensure smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}

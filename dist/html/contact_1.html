@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber XYZ - Comprehensive cybersecurity solutions for businesses. Protect your digital assets with our advanced security services.">
+  <title>Cyber XYZ - Comprehensive Cybersecurity Solutions</title>
+  <!-- Bootstrap.min css -->
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="css/stars.css">
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="css/contact.css">
+  <!-- Add this in your HTML head -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <style>
+  /* Modal styles */
+  .modal-privacy {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .modal-privacy-content {
+            position: relative;
+            background-color: #fff;
+            margin: 30px auto;
+            max-width: 900px;
+            width: 95%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-privacy-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .modal-privacy-header h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .modal-privacy .close-modal {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-privacy .close-modal:hover {
+            color: #bdc3c7;
+        }
+
+        .modal-privacy-body {
+            padding: 20px 30px;
+            overflow-y: auto;
+            flex-grow: 1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-height: calc(90vh - 140px);
+        }
+
+        .modal-privacy-footer {
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #f8f9fa;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .modal-privacy-submit-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-privacy-submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .modal-privacy h3 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .modal-privacy p {
+            margin: 15px 0;
+            color: #444;
+        }
+
+        .modal-privacy ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .modal-privacy li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .modal-privacy .highlight {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .modal-privacy .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        /* Scrollbar styling */
+        .modal-privacy-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-privacy-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .modal-privacy-body::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        .modal-privacy-body::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        @media (max-width: 768px) {
+            .modal-privacy-content {
+                margin: 15px auto;
+                width: 95%;
+            }
+
+            .modal-privacy-header h2 {
+                font-size: 20px;
+            }
+
+            .modal-privacy h3 {
+                font-size: 18px;
+            }
+
+            .modal-privacy-body {
+                padding: 15px;
+            }
+        }
+
+        .modal-privacy.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-submit-btn:focus,
+        .close-modal:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+  </style>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/typography.css">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.1/build/css/intlTelInput.css">
+  <script src="js/modal.js"></script>
+<body>
+    <div class="section-menu"></div>
+
+  
+  
+<!--MAIN HEADER AREA END -->
+<!--MAIN BANNER AREA START -->
+<section class="section-star">
+  <div class="page-banner-area page-contact" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+    <div class="bg-about-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
+    <div class="styleabout">
+        <h1 class="text-white">Check our story</h1>
+        <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+        <div class="iconabout">
+            <a href="https://www.linkedin.com/company/cyberxyz/" target="_blank" class="link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" />
+              </a>
+              <a href="https://github.com" target="_blank" class="link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" />
+              </a>
+              <a href="https://www.facebook.com" target="_blank" class="link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" alt="Twitter" />
+              </a>
+              </div>
+        </div>
+    </div>
+  </div>
+  </section>
+  
+  <section class="section-padding-contact smaller-contact">
+    <div class="container-contact">
+        <div class="left-column">
+            <h1>Get in touch</h1>
+            <p>Whether you're curious about features, integrations, or cybersecurity solutions — we're ready to answer any and all questions.</p>
+            <p>Submit your request and we will reach out to discuss how CyberXYZ can help secure your business.</p>
+        </div>
+        <div class="right-column">
+            <form id="contact-form">
+                <h2>Fill out this form and we'll get back to you shortly</h2>
+                <div class="row">
+                <label><strong>What are you interested in?</strong><span class="required">*</span></label>
+                <div class="interests">
+                    <label><input type="checkbox" name="interests" value="DFIR"> DFIR</label>
+                    <label><input type="checkbox" name="interests" value="Malware Analysis"> Malware Analysis</label>
+                    <label><input type="checkbox" name="interests" value="Vulnerabilities"> Vulnerabilities</label>
+                </div>
+                <span id="interests-error" class="error"></span>
+            </div>
+            <div class="row">
+                <div class="divider"></div>
+            </div>
+                <div class="row">
+                    <div>
+                        <label for="firstname">First name <span class="required">*</span></label>
+                        <input type="text" id="firstname" name="firstname" required placeholder="John">
+                    </div>
+                    <div>
+                        <label for="lastname">Last name <span class="required">*</span></label>
+                        <input type="text" id="lastname" name="lastname" required placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="full-width">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <span id="email-error" class="error"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group phone-container">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="313-000-4444" class="form-control">
+                        <span id="phone-error" class="error"></span>
+                    </div>
+                    <div class="os-container">
+                        <label for="os">What is your OS?</label>
+                        <select id="os" name="os">
+                            <option value="">-- Please select --</option>
+                            <option value="Windows">Windows</option>
+                            <option value="Windows-Arm">Windows-Arm</option>
+                            <option value="MacOS">MacOS</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="full-width">
+                        <label>What is your company size? </label>
+                        <select id="company_size" name="company_size">
+                            <option value="">Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201+">201+ employees</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">     <textarea name="message" placeholder="Your message here..."></textarea> <!-- Message box -->
+                </div>
+                <div class="row">
+                    <div class="form-group-privacy">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy" class="privacy-label">
+                        By subscribing, I understand and agree that CyberXYZ may contact me as further described in its 
+                        <a href="#" class="privacy-link">Privacy Policy</a>
+                    </label>
+                </div>
+                </div>
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+            <div id="success-message" style="display: none; color: green;">
+                Your message has been sent successfully! Thank you for contacting us.
+            </div>
+        </div>
+      
+    </div>
+    
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-privacy">
+        <div class="modal-privacy-content">
+            <div class="modal-privacy-header">
+                <h2>Privacy Policy</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-privacy-body">
+                <!-- Introduction -->
+                <h3>1. Introduction and Scope</h3>
+                <p>CyberXYZ Security Inc. ("we," "our," "us," or "the Company"), headquartered in Vancouver, Canada, is committed to protecting the privacy and security of all personal information we process. This comprehensive Privacy Policy outlines our practices for collecting, using, disclosing, and safeguarding information across all our operations, services, and interactions.</p>
+                
+                <div class="highlight">
+                    <p>This Privacy Policy applies to:</p>
+                    <ul>
+                        <li>All services and products provided by CyberXYZ Security Inc.</li>
+                        <li>Our website and mobile applications</li>
+                        <li>Customer support and communication channels</li>
+                        <li>Marketing and business development activities</li>
+                        <li>Vendor and partner relationships</li>
+                        <li>Employment and recruitment processes</li>
+                    </ul>
+                </div>
+
+                <!-- Information Collection -->
+                <h3>2. Information We Collect</h3>
+                <h3>2.1 Personal Information</h3>
+                <ul>
+                    <li>
+                        <strong>Basic Information:</strong>
+                        <ul>
+                            <li>Full name and title</li>
+                            <li>Contact information (email, phone, address)</li>
+                            <li>Government-issued identification (when required)</li>
+                            <li>Date of birth</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Professional Information:</strong>
+                        <ul>
+                            <li>Company name and position</li>
+                            <li>Business contact details</li>
+                            <li>Professional credentials</li>
+                            <li>Employment history</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Technical Information:</strong>
+                        <ul>
+                            <li>IP addresses and device identifiers</li>
+                            <li>Authentication credentials</li>
+                            <li>Security certificates and keys</li>
+                            <li>System logs and audit trails</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>2.2 Security and System Data</h3>
+                <div class="highlight">
+                    <p>As a cybersecurity company, we may collect:</p>
+                    <ul>
+                        <li>Security incident data and forensic information</li>
+                        <li>Threat intelligence and vulnerability data</li>
+                        <li>Network and system configuration details</li>
+                        <li>Security assessment results</li>
+                        <li>Penetration testing data</li>
+                    </ul>
+                </div>
+
+                <!-- Data Use -->
+                <h3>3. How We Use Your Information</h3>
+                <h3>3.1 Primary Purposes</h3>
+                <ul>
+                    <li>Providing cybersecurity services and solutions</li>
+                    <li>Detecting and preventing security threats</li>
+                    <li>Managing customer relationships and support</li>
+                    <li>Processing payments and transactions</li>
+                    <li>Maintaining service security and integrity</li>
+                </ul>
+
+                <h3>3.2 Secondary Purposes</h3>
+                <ul>
+                    <li>Improving our services and user experience</li>
+                    <li>Conducting research and development</li>
+                    <li>Marketing and business development</li>
+                    <li>Legal compliance and reporting</li>
+                </ul>
+
+                <!-- Legal Basis -->
+                <h3>4. Legal Basis for Processing</h3>
+                <div class="highlight">
+                    <p>We process personal information based on one or more of the following legal grounds:</p>
+                    <ul>
+                        <li><strong>Contractual Necessity:</strong> Processing required to fulfill our contractual obligations</li>
+                        <li><strong>Legal Obligation:</strong> Processing required to comply with applicable laws</li>
+                        <li><strong>Legitimate Interests:</strong> Processing that serves our legitimate business interests</li>
+                        <li><strong>Consent:</strong> Processing based on specific, informed consent</li>
+                    </ul>
+                </div>
+
+                <!-- Data Protection -->
+                <h3>5. Data Protection Measures</h3>
+                <h3>5.1 Technical Security Measures</h3>
+                <ul>
+                    <li>Advanced encryption for data in transit and at rest</li>
+                    <li>Multi-factor authentication systems</li>
+                    <li>Regular security audits and penetration testing</li>
+                    <li>Intrusion detection and prevention systems</li>
+                    <li>24/7 security monitoring and incident response</li>
+                </ul>
+
+                <h3>5.2 Organizational Security Measures</h3>
+                <ul>
+                    <li>Regular employee security training</li>
+                    <li>Strict access control policies</li>
+                    <li>Data protection impact assessments</li>
+                    <li>Vendor security assessments</li>
+                    <li>Incident response procedures</li>
+                </ul>
+
+                <!-- International Transfers -->
+                <h3>6. International Data Transfers</h3>
+                <div class="highlight">
+                    <p>When transferring data internationally, we ensure:</p>
+                    <ul>
+                        <li>Compliance with cross-border data transfer regulations</li>
+                        <li>Implementation of appropriate safeguards</li>
+                        <li>Use of standard contractual clauses</li>
+                        <li>Assessment of recipient country privacy standards</li>
+                    </ul>
+                </div>
+
+                <!-- Rights -->
+                <h3>7. Your Privacy Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your information</li>
+                    <li>Restrict or object to processing</li>
+                    <li>Data portability</li>
+                    <li>Withdraw consent</li>
+                    <li>Lodge a complaint with supervisory authorities</li>
+                </ul>
+
+                <!-- Retention -->
+                <h3>8. Data Retention</h3>
+                <div class="highlight">
+                    <p>We retain personal information for:</p>
+                    <ul>
+                        <li>The duration of our service relationship</li>
+                        <li>Periods required by law or regulation</li>
+                        <li>Time needed for legitimate business purposes</li>
+                        <li>Resolution of disputes or legal claims</li>
+                    </ul>
+                </div>
+
+                <!-- Special Categories -->
+                <h3>9. Special Categories of Data</h3>
+                <p>For certain services, we may process special categories of data, including:</p>
+                <ul>
+                    <li>Biometric data for security purposes</li>
+                    <li>Health information for employee management</li>
+                    <li>Background check information</li>
+                </ul>
+
+                <!-- Third Parties -->
+                <h3>10. Third-Party Relationships</h3>
+                <div class="highlight">
+                    <p>We may share information with:</p>
+                    <ul>
+                        <li>Service providers and subcontractors</li>
+                        <li>Law enforcement agencies when required</li>
+                        <li>Professional advisors and auditors</li>
+                        <li>Business partners and affiliates</li>
+                    </ul>
+                </div>
+
+                <!-- Cookies -->
+                <h3>11. Cookies and Tracking</h3>
+                <p>Our use of cookies and similar technologies includes:</p>
+                <ul>
+                    <li>Essential cookies for service functionality</li>
+                    <li>Analytics cookies for service improvement</li>
+                    <li>Security cookies for threat detection</li>
+                    <li>Preference cookies for user experience</li>
+                </ul>
+
+                <!-- Children -->
+                
+                <!-- Changes -->
+                <h3>12. Changes to This Policy</h3>
+                <div class="highlight">
+                    <p>We reserve the right to update this Privacy Policy periodically. Major changes will be notified through:</p>
+                    <ul>
+                        <li>Email notifications to affected users</li>
+                        <li>Website announcements</li>
+                        <li>Service notifications</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <h3>13. Contact Information</h3>
+                <div class="contact-info">
+                    <p><strong>CyberXYZ Security Inc.</strong></p>
+                    <p>Privacy Office</p>
+                    <p>Vancouver, BC</p>
+                    <p>Canada</p>
+                    <br>
+                    <p>Phone:</p>
+                    <p>Email:</p>
+                    <p>Website: </p>
+                </div>
+
+                <!-- Compliance -->
+                <h3>14. Regulatory Compliance</h3>
+                <div class="highlight">
+                    <p>We comply with various privacy regulations, including:</p>
+                    <ul>
+                        <li>Personal Information Protection and Electronic Documents Act (PIPEDA)</li>
+                        <li>British Columbia Personal Information Protection Act (PIPA)</li>
+                        <li>General Data Protection Regulation (GDPR)</li>
+                        <li>California Consumer Privacy Act (CCPA)</li>
+                        <li>Other applicable privacy laws and regulations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-privacy-footer">
+                <button type="button" class="modal-privacy-submit-btn">Accept Privacy Policy</button>
+            </div>
+        </div>
+    </div>
+</section>
+   
+
+<footer id="footer"></footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="plugins/google-map/map.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+  <script src="js/contact.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="components/menu.js"></script>
+  <script src="js/stars.js"></script>
+   <script src="js/footer.js"></script>
+   <script src="js/modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.1/build/js/intlTelInput.min.js"></script>
+
+</body>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Get required elements
+    const modal = document.getElementById('privacy-modal');
+    const modalContent = modal.querySelector('.modal-privacy-content');
+    const privacyCheckbox = document.getElementById('privacy');
+
+
+    // Create footer and submit button
+    function createSubmitButton() {
+        // Remove existing footer if present
+        const existingFooter = modalContent.querySelector('.modal-privacy-footer');
+        if (existingFooter) {
+            existingFooter.remove();
+        }
+
+        // Create new footer
+        const modalFooter = document.createElement('div');
+        modalFooter.className = 'modal-privacy-footer';
+
+        // Create submit button
+        const submitBtn = document.createElement('button');
+        submitBtn.type = 'button';
+        submitBtn.className = 'modal-privacy-submit-btn';
+        submitBtn.textContent = 'Accept Privacy Policy';
+
+        // Add click handler to submit button
+        submitBtn.addEventListener('click', function() {
+            // Check the privacy checkbox
+            privacyCheckbox.checked = true;
+            
+            // Close the modal with animation
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        });
+
+        // Append button to footer and footer to modal
+        modalFooter.appendChild(submitBtn);
+        modalContent.appendChild(modalFooter);
+    }
+
+    // Initialize the submit button
+    createSubmitButton();
+});</script>
+</html>

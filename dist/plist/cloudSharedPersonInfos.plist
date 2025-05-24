@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>21AC51EF-B7D0-49AB-A114-B782601EE053</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>amer.haddadeh@icloud.com</string>
+		</array>
+	</dict>
+	<key>669e9028b7793e2e2bace9431fbe7d37abff7b3a8eef1f9b098741cb2c49c60a</key>
+	<dict>
+		<key>email</key>
+		<string>kli1406@icloud.com</string>
+		<key>firstName</key>
+		<string>Софья</string>
+		<key>fullName</key>
+		<string>Софья клименко</string>
+		<key>lastName</key>
+		<string>клименко</string>
+	</dict>
+	<key>66d83688924696d2c9f1abe93eff3740e3df2409b5993a15d5edb28ada2aa587</key>
+	<dict>
+		<key>email</key>
+		<string>amer.haddadeh@icloud.com</string>
+		<key>firstName</key>
+		<string>Amro</string>
+		<key>fullName</key>
+		<string>Amro Haddadah</string>
+		<key>lastName</key>
+		<string>Haddadah</string>
+	</dict>
+	<key>AA554D1B-A190-405F-B0DB-43BE0500426B</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>kli1406@icloud.com</string>
+		</array>
+	</dict>
+	<key>B021D62C-2350-4D6A-A79F-D487F23A5334</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>kli1406@icloud.com</string>
+		</array>
+	</dict>
+	<key>F65DD524-0B6A-4101-80D6-4637EB022751</key>
+	<dict>
+		<key>emails</key>
+		<array>
+			<string>amer.haddadeh@icloud.com</string>
+		</array>
+	</dict>
+	<key>e255e100fe43587873d2ee8d21dd71169ab2811c9d340a155ecea8c34e4a9481</key>
+	<dict>
+		<key>email</key>
+		<string>kulikovadasha98@icloud.com</string>
+		<key>firstName</key>
+		<string>Dasha</string>
+		<key>fullName</key>
+		<string>Dasha Kulikova</string>
+		<key>lastName</key>
+		<string>Kulikova</string>
+	</dict>
+</dict>
+</plist>

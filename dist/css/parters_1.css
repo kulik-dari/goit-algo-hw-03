@@ -1,0 +1,145 @@
+
+.section-partners {
+  padding: 30px 0;
+  background: white;
+}
+
+.section-partners + .section-partners {
+  padding-top: 0;
+  margin-top: -20px;
+}
+
+.section-partners .marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-partners .marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.section-partners .marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
+
+.section-partners .marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+.section-partners .marquee__content li {
+  display: flex;
+  align-items: center;
+}
+
+.section-partners .marquee__content img {
+  margin: 0 30px;
+  width: 150px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-partners .marquee__content li img[alt="Unix"],
+.section-partners .marquee__content li img[alt="ARM"] {
+  width: 120px !important;  /* Decreased size */
+  height: 48px !important;
+  transform: scale(0.85); /* Base scale */
+  transition: transform 0.3s ease;
+}
+
+.section-partners .marquee__content li img[alt="Unix"]:hover,
+.section-partners .marquee__content li img[alt="ARM"]:hover {
+  transform: scale(1.02); /* Specific hover scale for Unix and ARM */
+}
+
+.section-partners .marquee__content li img[alt="Windows 11"] {
+  width: 165px !important;  /* Increased by 10% from default 150px */
+  height: 66px !important;  /* Increased by 10% from default 60px */
+}
+
+.section-partners .marquee__content li img[alt="Windows Server"] {
+  width: 182px !important;  /* Increased by additional 10% */
+  height: 73px !important;  /* Increased by additional 10% */
+}
+
+.section-partners .marquee__content li img[alt="Debian"] {
+  height: 60px !important;  /* Keep original height */
+}
+.section-partners .marquee__content li img[alt="Ubuntu"] {
+  height: 60px !important;  /* Keep original height */
+}
+.section-partners .marquee__content li img[alt="Sager"] {
+  width: 180px;  /* Increased size */
+  height: 72px;
+}
+
+.section-partners .marquee__content img:hover {
+  transform: scale(1.2);
+}
+
+/* Microsoft logo specific styles */
+.section-partners .marquee__content li img.microsoft-logo {
+  width: 240px !important;
+  height: 180px !important;
+  margin: 0 15px !important;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .section-partners .marquee {
+    width: 90%;
+  }
+  
+  .section-partners .marquee__content {
+    animation-duration: 15s;
+    gap: 0.5rem;
+  }
+  
+  .section-partners .marquee__content img {
+    width: 100px;
+    height: 40px;
+    margin: 0 15px;
+  }
+}
+
+/* Ensure smooth scrolling on all devices */
+@media (prefers-reduced-motion: reduce) {
+  .section-partners .marquee__content {
+    animation-duration: 30s;
+  }
+}
+
+/* High-contrast mode support */
+@media (forced-colors: active) {
+  .section-partners .marquee__content img {
+    forced-color-adjust: none;
+  }
+}

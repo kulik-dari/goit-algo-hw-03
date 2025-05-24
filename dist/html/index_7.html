@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber XYZ - Comprehensive cybersecurity solutions for businesses. Protect your digital assets with our advanced security services.">
+  <title>Cyber XYZ - Comprehensive Cybersecurity Solutions</title>
+  <!-- Bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/parters.css">
+ 
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/nobackground.png" type="image/x-icon">
+  <style>
+
+.newmodal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.newmodal {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.newmodal.fullscreen {
+    width: 100%;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.newmodal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background: white;
+    border-radius: 12px 12px 0 0;
+    flex-shrink: 0;
+}
+
+.newmodal.fullscreen .modal-header {
+    border-radius: 0;
+}
+
+.newmodal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.newheader-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.newheader-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #6B7280;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.newheader-button:hover {
+    background-color: #F3F4F6;
+    color: #111827;
+}
+
+.newscrollable-content {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.newhero-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    overflow: hidden;
+}
+.newhero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.newcontent {
+    padding: 24px;
+}
+
+.newmain-content {
+    color: #374151;
+    line-height: 1.6;
+}
+
+.share-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    display: none;
+    z-index: 1100;
+    min-width: 200px;
+}
+
+.share-menu.active {
+    display: block;
+}
+
+.share-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    color: #374151;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.share-option:hover {
+    background-color: #F3F4F6;
+}
+
+.share-option i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+    <div class="section-menu">
+        <nav id="menu">
+            <div id="logo">
+                
+               <img src="images/nobackground.png" alt="CyberXYZ Logo">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 50">
+                    <g class="letter-container">
+                        <path class="letter" d="M9 7.859999999999999 q-0.26 -0.04 -0.43 -0.24 t-0.17 -0.46 l0 -1.46 q0 -0.34 0.24 -0.54 t0.56 -0.16 q1.72 0.28 3.06 1.22 q1.74 1.26 2.46 3.34 q0.12 0.34 -0.08 0.64 t-0.58 0.3 l-1.6 0 q-0.22 0 -0.4 -0.11 t-0.26 -0.31 q-0.44 -1.04 -1.34 -1.66 q-0.7 -0.44 -1.46 -0.56 z M14.06 14.5 q0.38 0 0.58 0.3 t0.08 0.64 q-0.72 2.08 -2.46 3.34 q-1.34 0.94 -3.06 1.22 l-0.1 0 q-0.28 0 -0.46 -0.18 q-0.24 -0.18 -0.24 -0.52 l0 -1.46 q0 -0.26 0.16 -0.46 t0.42 -0.24 q0.84 -0.12 1.48 -0.56 q0.9 -0.62 1.34 -1.66 q0.08 -0.2 0.26 -0.31 t0.4 -0.11 l1.6 0 z M6.9 5.24 q0.26 0.2 0.26 0.54 l0 1.56 q0 0.22 -0.15 0.41 t-0.37 0.27 q-0.28 0.06 -0.44 0.14 q-0.8 0.36 -1.36 0.98 q-1.14 1.28 -1.14 3.35 t1.14 3.37 q0.7 0.8 1.8 1.12 q0.22 0.06 0.37 0.25 t0.15 0.41 l0 1.58 q0 0.34 -0.26 0.54 q-0.18 0.16 -0.46 0.16 l-0.14 0 q-2.14 -0.46 -3.62 -2.08 q-1.9 -2.14 -1.9 -5.34 t1.9 -5.34 q1.48 -1.64 3.62 -2.06 q0.32 -0.08 0.6 0.14 z "/>
+                        <path class="letter" d="M30.503999999999998 5.380000000000001 q0.1 0.18 0.09 0.38 t-0.13 0.36 l-5.54 8 l0 5.14 q0 0.28 -0.21 0.49 t-0.49 0.21 l-1.54 0 q-0.3 0 -0.51 -0.21 t-0.21 -0.49 l0 -5.86 q0 -0.2 0.14 -0.4 l5.34 -7.7 q0.1 -0.14 0.25 -0.22 t0.33 -0.08 l1.86 0 q0.2 0 0.37 0.1 t0.25 0.28 z M22.084 9.78 q-0.08 0.18 -0.25 0.28 t-0.37 0.1 l-1.86 0 q-0.36 0 -0.6 -0.3 l-2.6 -3.74 q-0.1 -0.16 -0.11 -0.36 t0.07 -0.38 t0.25 -0.28 t0.37 -0.1 l1.88 0 q0.34 0 0.58 0.3 l2.6 3.74 q0.1 0.16 0.11 0.36 t-0.07 0.38 z"/>
+                        <path class="letter" d="M43.668 12.18 q1.04 0.64 1.52 1.84 q0.28 0.64 0.28 1.58 q0 1.46 -0.78 2.45 t-2.28 1.47 q-0.94 0.32 -2.22 0.32 l-6.38 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.44 q0 -0.3 0.21 -0.51 t0.49 -0.21 l6.54 0 q1.16 0 1.72 -0.42 q0.48 -0.4 0.48 -1.09 t-0.5 -1.13 q-0.62 -0.54 -1.86 -0.54 l-6.38 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.51 l0 -1.38 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.02 0 q0.86 0 1.34 -0.3 q0.34 -0.2 0.54 -0.58 q0.14 -0.28 0.14 -0.65 t-0.1 -0.67 q-0.08 -0.24 -0.28 -0.44 q-0.44 -0.5 -1.46 -0.5 l-6.2 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.44 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.02 0 q2.48 0 3.82 1.4 q1.14 1.14 1.14 2.86 q0 1.84 -1.12 2.92 z"/>
+                        <path class="letter" d="M59.372 16.96 q0.3 0 0.5 0.21 t0.2 0.51 l0 1.46 q0 0.28 -0.2 0.49 t-0.5 0.21 l-9.88 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.46 q0 -0.3 0.21 -0.51 t0.49 -0.21 l9.88 0 z M49.492 13.86 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.5 q0 -0.28 0.21 -0.49 t0.49 -0.21 l8.98 0 q0.3 0 0.51 0.21 t0.21 0.49 l0 1.5 q0 0.28 -0.21 0.49 t-0.51 0.21 l-8.98 0 z M59.372 5 q0.3 0 0.5 0.21 t0.2 0.49 l0 1.46 q0 0.3 -0.2 0.51 t-0.5 0.21 l-9.88 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.51 l0 -1.46 q0 -0.28 0.21 -0.49 t0.49 -0.21 l9.88 0 z 856 14.1 l3.02 4.62 q0.22 0.36 0.02 0.72 q-0.08 0.16 -0.25 0.26 t-0.35 0.1 l-1.82 0 q-0.18 0 -0.34 -0.09 t-0.24 M72.-0.23 l-3.04 -4.82 l-3.56 0 l0 4.44 q0 0.28 -0.21 0.49 t-0.49 0.21 l-1.52 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -6.58 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.16 0 q1.76 0 2.34 -1 q0.2 -0.32 0.2 -0.92 q0 -0.94 -0.62 -1.48 q-0.64 -0.58 -1.84 -0.58 l-6.24 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.44 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.42 0 q2.34 0 3.74 1.32 q1.46 1.32 1.46 3.58 q0 1.46 -0.64 2.49 t-1.86 1.57 z M96.524 18.82 q0.12 0.16 0.14 0.36 t-0.06 0.38 t-0.26 0.29 t-0.38 0.11 l-1.94 0 q-0.36 0 -0.58 -0.28 l-3.82 -5.06 l-3.82 5.06 q-0.22 0.28 -0.56 0.28 l-1.96 0 q-0.2 0 -0.37 -0.1 t-0.25 -0.28 q-0.2 -0.42 0.06 -0.76 l10.36 -13.54 q0.22 -0.28 0.56 -0.28 l1.94 0 q0.2 0 0.37 0.11 t0.27 0.29 t0.08 0.38 t-0.16 0.36 l-4.7 6.12 z"/>
+                        <path class="letter" d="M72.856 14.1l3.02 4.62q0.22 0.36 0.02 0.72q-0.08 0.16 -0.25 0.26t-0.35 0.1l-1.82 0q-0.18 0 -0.34 -0.09t-0.24 -0.23l-3.04 -4.82l-3.56 0l0 4.44q0 0.28 -0.21 0.49t-0.49 0.21l-1.52 0q-0.28 0 -0.49 -0.21t-0.21 -0.49l0 -6.58q0 -0.28 0.21 -0.49t0.49 -0.21l6.16 0q1.76 0 2.34 -1q0.2 -0.32 0.2 -0.92q0 -0.94 -0.62 -1.48q-0.64 -0.58 -1.84 -0.58l-6.24 0q-0.28 0 -0.49 -0.21t-0.21 -0.49l0 -1.44q0 -0.28 0.21 -0.49t0.49 -0.21l6.42 0q2.34 0 3.74 1.32q1.46 1.32 1.46 3.58q0 1.46 -0.64 2.49t-1.86 1.57z"/>
+                       
+                        <path class="letter" d="M96.524 18.82 q0.12 0.16 0.14 0.36 t-0.06 0.38 t-0.26 0.29 t-0.38 0.11 l-1.94 0 q-0.36 0 -0.58 -0.28 l-3.82 -5.06 l-3.82 5.06 q-0.22 0.28 -0.56 0.28 l-1.96 0 q-0.2 0 -0.37 -0.1 t-0.25 -0.28 q-0.2 -0.42 0.06 -0.76 l10.36 -13.54 q0.22 -0.28 0.56 -0.28 l1.94 0 q0.2 0 0.37 0.11 t0.27 0.29 t0.08 0.38 t-0.16 0.36 l-4.7 6.12 z M85.98400000000001 9.88 l-2.88 -3.74 q-0.14 -0.16 -0.16 -0.36 t0.08 -0.38 t0.27 -0.29 t0.37 -0.11 l1.94 0 q0.16 0 0.32 0.07 t0.24 0.21 l2.82 3.74 q0.28 0.34 0.08 0.76 q-0.08 0.18 -0.25 0.28 t-0.39 0.1 l-1.88 0 q-0.16 0 -0.32 -0.07 t-0.24 -0.21 z"/>
+                        <path class="letter" d="M111.72800000000001 5.380000000000001 q0.1 0.18 0.09 0.38 t-0.13 0.36 l-5.54 8 l0 5.14 q0 0.28 -0.21 0.49 t-0.49 0.21 l-1.54 0 q-0.3 0 -0.51 -0.21 t-0.21 -0.49 l0 -5.86 q0 -0.2 0.14 -0.4 l5.34 -7.7 q0.1 -0.14 0.25 -0.22 t0.33 -0.08 l1.86 0 q0.2 0 0.37 0.1 t0.25 0.28 z M103.308 9.78 q-0.08 0.18 -0.25 0.28 t-0.37 0.1 l-1.86 0 q-0.36 0 -0.6 -0.3 l-2.6 -3.74 q-0.1 -0.16 -0.11 -0.36 t0.07 -0.38 t0.25 -0.28 t0.37 -0.1 l1.88 0 q0.34 0 0.58 0.3 l2.6 3.74 q0.1 0.16 0.11 0.36 t-0.07 0.38 z"/>
+                        <path class="letter" d="M124.73200000000001 17.12 q0.28 0 0.49 0.21 t0.21 0.49 l0 1.44 q0 0.28 -0.21 0.49 t-0.49 0.21 l-10.74 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.46 q0 -0.24 0.16 -0.44 l2.86 -3.46 q0.22 -0.26 0.54 -0.26 l1.92 0 q0.2 0 0.38 0.11 t0.27 0.3 t0.06 0.4 t-0.17 0.35 l-1.92 2.32 l7.34 0 z M124.73200000000001 5 q0.28 0 0.49 0.21 t0.21 0.51 l0 1.46 q0 0.26 -0.16 0.46 l-2.86 3.42 q-0.2 0.26 -0.54 0.26 l-1.9 0 q-0.2 0 -0.38 -0.11 t-0.28 -0.29 q-0.16 -0.44 0.1 -0.76 l1.92 -2.3 l-7.2 0 q-0.3 0 -0.51 -0.21 t-0.21 -0.51 l0 -1.42 q0 -0.3 0.21 -0.51 t0.51 -0.21 l10.6 0 z"/>
+                    </g>
+                   
+                </svg>
+                <span class="underscore">_</span>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-overlay" id="menu-overlay"></div>
+        
+        <div class="navbar-center">
+            <ul class="navbar-nav" id="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-link>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-link>About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html" class="nav-link" data-link>Service</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pricing.html" class="nav-link" data-link>Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-link>Contact</a>
+                </li>
+         
+                <li class="nav-item-demo">
+              
+                    <button onclick="openModal()" class="btn-outline-dark1 btn-hover-color"> Book Demo </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+          <span class="close-modal" onclick="closeModal()">&times;</span>
+          <div class="iframe-container">
+              <iframe src="https://outlook-sdf.office.com/bookwithme/user/f26966c203b14789a4dab153891adf9e@cyberxyz.io/meetingtype/A9xzCWBLo0OcQeGAOTqgzw2?anonymous&ep=mcard&isanonymous=true"></iframe>
+          </div>
+      </div>
+    </div>
+
+
+  
+
+    <!-- Main Banner Area -->
+    <section class="section-blackhole">
+      <div id="blackhole">
+      <div class="banner-content">
+          <h5>Cyber security company</h5>
+          <h1>Securing Your Digital Future</h1>
+          <p>We provide cutting-edge cybersecurity solutions to protect your assets and data in an ever-evolving threat landscape.</p>
+         <a href="#fortress-section" class="btn-outline-dark1 btn-hover-color">Get Started</a>
+      </div>
+    </div>
+  </section>
+  <section class="section-partners">
+    <div class="marquee marquee--hover-pause">
+        <ul class="marquee__content">
+            <li><img src="images/icons/windows-11-logo-icon.svg" alt="Windows 11" class="img-fluid"></li>
+            <li><img src="images/icons/Windows_Server_logo.svg" alt="Windows Server" class="img-fluid"></li>
+            <li><img src="images/icons/Arm.svg" alt="ARM" class="img-fluid"></li>
+            <li><img src="images/icons/debian.svg" alt="Debian" class="img-fluid"></li>
+            <li><img src="images/icons/ubuntu.svg" alt="Ubuntu" class="img-fluid"></li>
+            <li><img src="images/icons/UNIX_logo.svg" alt="Unix" class="img-fluid"></li>
+        </ul>
+        <ul aria-hidden="true" class="marquee__content">
+            <li><img src="images/icons/windows-11-logo-icon.svg" alt="Windows 11" class="img-fluid"></li>
+            <li><img src="images/icons/Windows_Server_logo.svg" alt="Windows Server" class="img-fluid"></li>
+            <li><img src="images/icons/Arm.svg" alt="ARM" class="img-fluid"></li>
+            <li><img src="images/icons/debian.svg" alt="Debian" class="img-fluid"></li>
+            <li><img src="images/icons/ubuntu.svg" alt="Ubuntu" class="img-fluid"></li>
+            <li><img src="images/icons/UNIX_logo.svg" alt="Unix" class="img-fluid"></li>
+        </ul>
+    </div>
+</section>
+  <section class="section-partners">
+    <div class="marquee">
+      <ul class="marquee__content">
+        <img src="images/icons/Microsoft_logo.svg" alt="Microsoft Logo" class="img-fluid">
+         <img src="images/icons/Network_International_logo.svg.svg" alt="Network Logo" class="img-fluid">
+            <img src="images/icons/Accenture.svg" alt="partner" class="img-fluid">
+            <img src="images/clients/client05.png" alt="partner" class="img-fluid"> 
+      </ul>
+      <ul aria-hidden="true" class="marquee__content">
+     <img src="images/icons/Microsoft_logo.svg" alt="Microsoft Logo" class="img-fluid">
+         <img src="images/icons/Network_International_logo.svg.svg" alt="Network Logo" class="img-fluid">
+            <img src="images/icons/Accenture.svg" alt="partner" class="img-fluid">
+            <img src="images/clients/client05.png" alt="partner" class="img-fluid"> 
+      </ul>
+    </div>
+  </section>
+
+
+<section class="section-padding-anotherabout-company" id="fortress-section">
+    <div class="anotherabout">
+        <div class="container">
+            <div class="left-section">
+                <h1>Cyber XYZ: Your Fortress in the Digital Realm</h1>
+                <p>One platform to safeguard your entire digital ecosystem. Cyber XYZ is where cutting-edge technology meets expert insight to protect your assets, detect threats, and respond to incidents with unparalleled efficiency.</p>
+            </div>
+            <div class="right-section">
+                <div class="card" onclick="openPopup('popup1')">
+                    <div class="card-image threat-intel"></div>
+                    <h3>Threat Intelligence</h3>
+                    <p>Stay ahead of cyber criminals with real-time threat data and predictive analytics.</p>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="card" onclick="openPopup('popup2')">
+                    <div class="card-image network-sec"></div>
+                    <h3>Network Security</h3>
+                    <p>Fortify your perimeter with next-gen firewalls and intrusion prevention systems.</p>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="card" onclick="openPopup('popup3')">
+                    <div class="card-image incident-response"></div>
+                    <h3>Incident Response</h3>
+                    <p>Swift and decisive action when seconds count. Our team is ready 24/7.</p>
+                    <span class="arrow">→</span>
+                </div>
+               
+    <div class="card" onclick="openPopup('popup4')">
+                    <div class="card-image cloud-sec"></div>
+                    <h3>Cloud Security</h3>
+                    <p>Secure your cloud infrastructure with our comprehensive protection suite.</p>
+                    <span class="arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="newmodal-backdrop">
+    <div class="newmodal">
+        <div class="newmodal-header">
+            <h2 class="newmodal-title"></h2>
+            <div class="newheader-actions">
+                <button class="newheader-button share-button" title="Share">
+                    <i class="fas fa-share-alt"></i>
+                    <div class="share-menu">
+                        <div class="share-option" data-action="copy">
+                            <i class="fas fa-clipboard"></i> Copy Link
+                        </div>
+                        <div class="share-option" data-action="email">
+                            <i class="fas fa-envelope"></i> Email
+                        </div>
+                        <div class="share-option" data-action="linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </div>
+                        <div class="share-option" data-action="twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </div>
+                    </div>
+                </button>
+                <button class="newheader-button fullscreen-button" title="Toggle fullscreen">⤢</button>
+                <button class="newheader-button close-button" title="Close">×</button>
+            </div>
+        </div>
+        <div class="newscrollable-content">
+            <div class="newhero-image">
+                <img src="" alt="Feature illustration">
+            </div>
+            <div class="newcontent">
+                <div class="newmain-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--  Timeline  -->
+    <section class="timeline-container">
+      
+      <div class="timeline-header">
+          <div class="header-logo-wrapper">
+              <h2 class="timeline-header__title">Cyber XYZ</h2>
+          </div>
+          <h3 class="timeline-header__subtitle">Our Journey</h3>
+      </div>
+      
+      <div class="timeline">
+          <div class="timeline-logo">
+              <img src="images/nobackground.png" alt="Cyber XYZ Logo" >
+          </div>
+          <div class="timeline-item" data-text="Foundation">
+              <div class="timeline__content">
+                  <h2 class="timeline__content-title">
+                      Company Foundation
+                  </h2>
+                  <p class="timeline__content-desc">Cyber XYZ was founded with a vision to revolutionize cybersecurity. Our team of experts came together to create innovative solutions for the digital age.</p>
+              </div>
+          </div>
+          <div class="timeline-item" data-text="Growth">
+              <div class="timeline__content">
+                  <h2 class="timeline__content-title">
+                      Rapid Growth
+                  </h2>
+                  <p class="timeline__content-desc">As cyber threats evolved, so did we. Our client base expanded rapidly as we continued to deliver cutting-edge security solutions to businesses of all sizes.</p>
+              </div>
+          </div>
+          <div class="timeline-item" data-text="Innovation">
+              <div class="timeline__content">
+                  <h2 class="timeline__content-title">
+                      Technological Breakthroughs
+                  </h2>
+                  <p class="timeline__content-desc">We pioneered new technologies in threat detection and response, setting new industry standards and earning recognition from cybersecurity experts worldwide.</p>
+              </div>
+          </div>
+          <div class="timeline-item" data-text="Global Impact">
+              <div class="timeline__content">
+                  <h2 class="timeline__content-title">
+                      Global Expansion
+                  </h2>
+                  <p class="timeline__content-desc">Today, Cyber XYZ operates globally, protecting organizations across continents and continuing to lead the fight against cyber threats.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+ 
+  
+    
+    <!--  ABOUT AREA START  -->
+    <section class="section-about2">
+      <div class="container">
+
+       <div class="contents">
+            <h2>We are a dynamic team of cybersecurity experts</h2>
+            <p>We provide comprehensive cybersecurity services, from threat assessment to incident response, helping companies safeguard their digital assets and maintain business continuity.</p>
+          </div>
+      <!-- Buttons container -->
+<div class="buttons">
+  <button class="btn-filled-dark1">   <a href="service.html" class="services">Explore our services</a></button>
+    
+    <div id="bookingModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button type="button" class="close-button-demo" onclick="closeModal()">×</button>
+            <div class="iframe-container">
+                <iframe src="https://outlook-sdf.office.com/bookwithme/user/f26966c203b14789a4dab153891adf9e@cyberxyz.io/meetingtype/A9xzCWBLo0OcQeGAOTqgzw2?anonymous&ep=mcard&isanonymous=true" frameborder="0" allow="autoplay; camera; microphone; fullscreen; display-capture"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Your existing button -->
+    <button onclick="openModal()" class="btn-outline-dark1 btn-hover-color"> Book Demo </button>
+</div>
+
+
+
+
+<!-- Modal moved outside the buttons container -->
+
+    </div>
+    </section>
+   
+    <!--  Footer -->
+ <footer id="footer">
+  <div class="col col1">
+    <img src="images/nobackground.png" class="img-footer" alt="footer" aria-hidden="">
+    
+   <div class="svg-letters"> <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 50">
+      <g class="letters">
+          <path class="letters" d="M9 7.859999999999999 q-0.26 -0.04 -0.43 -0.24 t-0.17 -0.46 l0 -1.46 q0 -0.34 0.24 -0.54 t0.56 -0.16 q1.72 0.28 3.06 1.22 q1.74 1.26 2.46 3.34 q0.12 0.34 -0.08 0.64 t-0.58 0.3 l-1.6 0 q-0.22 0 -0.4 -0.11 t-0.26 -0.31 q-0.44 -1.04 -1.34 -1.66 q-0.7 -0.44 -1.46 -0.56 z M14.06 14.5 q0.38 0 0.58 0.3 t0.08 0.64 q-0.72 2.08 -2.46 3.34 q-1.34 0.94 -3.06 1.22 l-0.1 0 q-0.28 0 -0.46 -0.18 q-0.24 -0.18 -0.24 -0.52 l0 -1.46 q0 -0.26 0.16 -0.46 t0.42 -0.24 q0.84 -0.12 1.48 -0.56 q0.9 -0.62 1.34 -1.66 q0.08 -0.2 0.26 -0.31 t0.4 -0.11 l1.6 0 z M6.9 5.24 q0.26 0.2 0.26 0.54 l0 1.56 q0 0.22 -0.15 0.41 t-0.37 0.27 q-0.28 0.06 -0.44 0.14 q-0.8 0.36 -1.36 0.98 q-1.14 1.28 -1.14 3.35 t1.14 3.37 q0.7 0.8 1.8 1.12 q0.22 0.06 0.37 0.25 t0.15 0.41 l0 1.58 q0 0.34 -0.26 0.54 q-0.18 0.16 -0.46 0.16 l-0.14 0 q-2.14 -0.46 -3.62 -2.08 q-1.9 -2.14 -1.9 -5.34 t1.9 -5.34 q1.48 -1.64 3.62 -2.06 q0.32 -0.08 0.6 0.14 z "/>
+          <path class="letters" d="M30.503999999999998 5.380000000000001 q0.1 0.18 0.09 0.38 t-0.13 0.36 l-5.54 8 l0 5.14 q0 0.28 -0.21 0.49 t-0.49 0.21 l-1.54 0 q-0.3 0 -0.51 -0.21 t-0.21 -0.49 l0 -5.86 q0 -0.2 0.14 -0.4 l5.34 -7.7 q0.1 -0.14 0.25 -0.22 t0.33 -0.08 l1.86 0 q0.2 0 0.37 0.1 t0.25 0.28 z M22.084 9.78 q-0.08 0.18 -0.25 0.28 t-0.37 0.1 l-1.86 0 q-0.36 0 -0.6 -0.3 l-2.6 -3.74 q-0.1 -0.16 -0.11 -0.36 t0.07 -0.38 t0.25 -0.28 t0.37 -0.1 l1.88 0 q0.34 0 0.58 0.3 l2.6 3.74 q0.1 0.16 0.11 0.36 t-0.07 0.38 z"/>
+          <path class="letters" d="M43.668 12.18 q1.04 0.64 1.52 1.84 q0.28 0.64 0.28 1.58 q0 1.46 -0.78 2.45 t-2.28 1.47 q-0.94 0.32 -2.22 0.32 l-6.38 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.44 q0 -0.3 0.21 -0.51 t0.49 -0.21 l6.54 0 q1.16 0 1.72 -0.42 q0.48 -0.4 0.48 -1.09 t-0.5 -1.13 q-0.62 -0.54 -1.86 -0.54 l-6.38 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.51 l0 -1.38 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.02 0 q0.86 0 1.34 -0.3 q0.34 -0.2 0.54 -0.58 q0.14 -0.28 0.14 -0.65 t-0.1 -0.67 q-0.08 -0.24 -0.28 -0.44 q-0.44 -0.5 -1.46 -0.5 l-6.2 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.44 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.02 0 q2.48 0 3.82 1.4 q1.14 1.14 1.14 2.86 q0 1.84 -1.12 2.92 z"/>
+          <path class="letters" d="M59.372 16.96 q0.3 0 0.5 0.21 t0.2 0.51 l0 1.46 q0 0.28 -0.2 0.49 t-0.5 0.21 l-9.88 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.46 q0 -0.3 0.21 -0.51 t0.49 -0.21 l9.88 0 z M49.492 13.86 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.5 q0 -0.28 0.21 -0.49 t0.49 -0.21 l8.98 0 q0.3 0 0.51 0.21 t0.21 0.49 l0 1.5 q0 0.28 -0.21 0.49 t-0.51 0.21 l-8.98 0 z M59.372 5 q0.3 0 0.5 0.21 t0.2 0.49 l0 1.46 q0 0.3 -0.2 0.51 t-0.5 0.21 l-9.88 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.51 l0 -1.46 q0 -0.28 0.21 -0.49 t0.49 -0.21 l9.88 0 z 856 14.1 l3.02 4.62 q0.22 0.36 0.02 0.72 q-0.08 0.16 -0.25 0.26 t-0.35 0.1 l-1.82 0 q-0.18 0 -0.34 -0.09 t-0.24 M72.-0.23 l-3.04 -4.82 l-3.56 0 l0 4.44 q0 0.28 -0.21 0.49 t-0.49 0.21 l-1.52 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -6.58 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.16 0 q1.76 0 2.34 -1 q0.2 -0.32 0.2 -0.92 q0 -0.94 -0.62 -1.48 q-0.64 -0.58 -1.84 -0.58 l-6.24 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.44 q0 -0.28 0.21 -0.49 t0.49 -0.21 l6.42 0 q2.34 0 3.74 1.32 q1.46 1.32 1.46 3.58 q0 1.46 -0.64 2.49 t-1.86 1.57 z M96.524 18.82 q0.12 0.16 0.14 0.36 t-0.06 0.38 t-0.26 0.29 t-0.38 0.11 l-1.94 0 q-0.36 0 -0.58 -0.28 l-3.82 -5.06 l-3.82 5.06 q-0.22 0.28 -0.56 0.28 l-1.96 0 q-0.2 0 -0.37 -0.1 t-0.25 -0.28 q-0.2 -0.42 0.06 -0.76 l10.36 -13.54 q0.22 -0.28 0.56 -0.28 l1.94 0 q0.2 0 0.37 0.11 t0.27 0.29 t0.08 0.38 t-0.16 0.36 l-4.7 6.12 z"/>
+          <path class="letters" d="M72.856 14.1l3.02 4.62q0.22 0.36 0.02 0.72q-0.08 0.16 -0.25 0.26t-0.35 0.1l-1.82 0q-0.18 0 -0.34 -0.09t-0.24 -0.23l-3.04 -4.82l-3.56 0l0 4.44q0 0.28 -0.21 0.49t-0.49 0.21l-1.52 0q-0.28 0 -0.49 -0.21t-0.21 -0.49l0 -6.58q0 -0.28 0.21 -0.49t0.49 -0.21l6.16 0q1.76 0 2.34 -1q0.2 -0.32 0.2 -0.92q0 -0.94 -0.62 -1.48q-0.64 -0.58 -1.84 -0.58l-6.24 0q-0.28 0 -0.49 -0.21t-0.21 -0.49l0 -1.44q0 -0.28 0.21 -0.49t0.49 -0.21l6.42 0q2.34 0 3.74 1.32q1.46 1.32 1.46 3.58q0 1.46 -0.64 2.49t-1.86 1.57z"/>
+          
+          <path class="letters" d="M96.524 18.82 q0.12 0.16 0.14 0.36 t-0.06 0.38 t-0.26 0.29 t-0.38 0.11 l-1.94 0 q-0.36 0 -0.58 -0.28 l-3.82 -5.06 l-3.82 5.06 q-0.22 0.28 -0.56 0.28 l-1.96 0 q-0.2 0 -0.37 -0.1 t-0.25 -0.28 q-0.2 -0.42 0.06 -0.76 l10.36 -13.54 q0.22 -0.28 0.56 -0.28 l1.94 0 q0.2 0 0.37 0.11 t0.27 0.29 t0.08 0.38 t-0.16 0.36 l-4.7 6.12 z M85.98400000000001 9.88 l-2.88 -3.74 q-0.14 -0.16 -0.16 -0.36 t0.08 -0.38 t0.27 -0.29 t0.37 -0.11 l1.94 0 q0.16 0 0.32 0.07 t0.24 0.21 l2.82 3.74 q0.28 0.34 0.08 0.76 q-0.08 0.18 -0.25 0.28 t-0.39 0.1 l-1.88 0 q-0.16 0 -0.32 -0.07 t-0.24 -0.21 z"/>
+          <path class="letters" d="M111.72800000000001 5.380000000000001 q0.1 0.18 0.09 0.38 t-0.13 0.36 l-5.54 8 l0 5.14 q0 0.28 -0.21 0.49 t-0.49 0.21 l-1.54 0 q-0.3 0 -0.51 -0.21 t-0.21 -0.49 l0 -5.86 q0 -0.2 0.14 -0.4 l5.34 -7.7 q0.1 -0.14 0.25 -0.22 t0.33 -0.08 l1.86 0 q0.2 0 0.37 0.1 t0.25 0.28 z M103.308 9.78 q-0.08 0.18 -0.25 0.28 t-0.37 0.1 l-1.86 0 q-0.36 0 -0.6 -0.3 l-2.6 -3.74 q-0.1 -0.16 -0.11 -0.36 t0.07 -0.38 t0.25 -0.28 t0.37 -0.1 l1.88 0 q0.34 0 0.58 0.3 l2.6 3.74 q0.1 0.16 0.11 0.36 t-0.07 0.38 z"/>
+          <path class="letters" d="M124.73200000000001 17.12 q0.28 0 0.49 0.21 t0.21 0.49 l0 1.44 q0 0.28 -0.21 0.49 t-0.49 0.21 l-10.74 0 q-0.28 0 -0.49 -0.21 t-0.21 -0.49 l0 -1.46 q0 -0.24 0.16 -0.44 l2.86 -3.46 q0.22 -0.26 0.54 -0.26 l1.92 0 q0.2 0 0.38 0.11 t0.27 0.3 t0.06 0.4 t-0.17 0.35 l-1.92 2.32 l7.34 0 z M124.73200000000001 5 q0.28 0 0.49 0.21 t0.21 0.51 l0 1.46 q0 0.26 -0.16 0.46 l-2.86 3.42 q-0.2 0.26 -0.54 0.26 l-1.9 0 q-0.2 0 -0.38 -0.11 t-0.28 -0.29 q-0.16 -0.44 0.1 -0.76 l1.92 -2.3 l-7.2 0 q-0.3 0 -0.51 -0.21 t-0.21 -0.51 l0 -1.42 q0 -0.3 0.21 -0.51 t0.51 -0.21 l10.6 0 z"/>
+      </g>
+      </svg></div>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/cyberxyz/" target="_blank" class="link">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/your-username" target="_blank" class="link">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.facebook.com/your-page" target="_blank" class="link">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    <p class="rights">2024 &copy; All Rights Reserved</p>
+  </div>
+  <div class="col col2">
+    <a href="index.html" class="footer-link">Home</a>
+    <a href="pricing.html" class="footer-link">Pricing</a>
+    <a href="contact.html" class="footer-link">Contact</a>
+  </div>
+  <div class="col col3">
+    <a href="services.html" class="footer-link">Services</a>
+    <a href="about.html" class="footer-link">About Us</a>
+  </div>
+ 
+  
+  <div class="spaceship-container">
+    <div class="stars1"></div>
+    <div class="spaceship">
+      <svg width="120" height="60" viewBox="0 0 120 60">
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        
+        <path d="M30,30 Q45,15 60,15 Q75,15 90,30 Q75,45 60,45 Q45,45 30,30" 
+              fill="url(#shipGradient)" stroke="#FFFFFF" stroke-width="1" filter="url(#glow)"/>
+        
+        <linearGradient id="shipGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#4A6FFF"/>
+          <stop offset="100%" style="stop-color:#9C6DFF"/>
+        </linearGradient>
+        
+        <ellipse cx="60" cy="30" rx="12" ry="10" 
+                 fill="#7FDBFF" fill-opacity="0.8" stroke="#FFFFFF"/>
+        
+        <path d="M45,20 L55,25 L45,30" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+        <path d="M45,40 L55,35 L45,30" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+        
+        <rect x="25" y="25" width="10" height="10" 
+              fill="#B0B0B0" stroke="#FFFFFF"/>
+      </svg>
+      
+      <div class="particles"></div>
+    </div>
+  </div>
+  
+  <div class="backdrop"></div>
+</footer>
+
+  <!-- Essential Scripts -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Main Script -->
+
+  <script src="js/menu.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/blackhole.js"></script>
+  <script src="js/newpopup.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+    
+   </body>
+</html>

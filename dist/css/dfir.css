@@ -1,0 +1,658 @@
+ 
+ .dfir{
+    background: url('https://img.freepik.com/premium-photo/abstract-blurred-sky-colorful_40299-22.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border-radius: 6rem;
+              margin: 4rem 6rem 0rem 6rem;
+              padding: 20px 20px 60px;
+              margin-top: -4rem;
+ }
+ .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: #666;
+        }
+
+        /* Timeline Styles */
+        .timeline-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .timeline-container {
+            position: relative;
+            padding: 3rem 0;
+            overflow: hidden;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e5e7eb;
+            transform: translateY(-50%);
+        }
+
+        .timeline-progress {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 2px;
+            background: #186aff;
+            transform: translateY(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .timeline-steps {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+            position: relative;
+        }
+
+        .timeline-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .step-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background: white;
+            border: 2px solid #e5e7eb;
+            color: #9ca3af;
+            transition: all 0.3s ease;
+        }
+
+        .step-icon.active {
+            background: #186aff;
+            border-color: #186aff;
+            color: white;
+        }
+
+        .step-content h3 {
+            font-size: 1rem;
+            
+        }
+
+        .step-content p {
+            font-size: 0.875rem;
+            color: #666;
+            max-width: 200px;
+            margin: 1rem auto;
+        }
+
+        /* Process Steps Styles */
+        .process-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .process-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .process-steps {
+           
+            font-size: small;
+        }
+
+        @media (min-width: 768px) {
+            .process-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: small;
+        }
+
+        .process-step {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            background: white;
+            border: 1px solid #e5e7eb;
+            font-size: 1rem;
+        }
+
+        .process-step svg {
+            color: #f79a6b;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step.active svg {
+            color: #DB7F67;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step ul {
+            font-size: 0.8rem;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .process-step li {
+            margin-bottom: 0.25rem;
+            color: #4a5568;
+        }
+
+        .process-step.active {
+            background: #b3d4f6;
+            color: white;
+        }
+
+        .process-step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .process-icon {
+            background-color: #fde6dd;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        .process-step svg {
+            color: #f79a6b;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step.active .process-icon {
+            background-color: #f8d5c8;
+        }
+
+        .process-step.active svg {
+            color: #DB7F67;
+        }
+
+        .process-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .process-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .detail-item {
+            background: #f9fafb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-line, .timeline-progress {
+                display: none;
+            }
+
+            .step-content {
+                margin-left: 1rem;
+            }
+        }
+/* Base styles */
+
+
+/* Responsive margins for different screen sizes */
+@media (min-width: 768px) {
+    .dfir {
+        margin: 3rem 3rem 0 3rem;
+        border-radius: 3rem;
+        padding: 80px 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dfir {
+        margin: 6rem 6rem 0 6rem;
+        border-radius: 6rem;
+        padding: 100px 60px;
+    }
+}
+
+/* Header styles with responsive font sizes */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (min-width: 768px) {
+    .header {
+        margin-bottom: 3rem;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        margin-bottom: 4rem;
+    }
+    
+    .header h1 {
+        font-size: 3rem;
+    }
+    
+    .header p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Timeline section responsive styles */
+.timeline-section {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    .timeline-section {
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .timeline-section {
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+}
+
+/* Timeline steps responsive grid */
+.timeline-steps {
+    display: grid;
+    gap: 1.5rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* Mobile-first approach for timeline steps */
+@media (max-width: 767px) {
+    .timeline-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-step {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1rem;
+    }
+    
+    .step-content {
+        flex: 1;
+    }
+    
+    .step-icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0;
+    }
+    
+    .timeline-line,
+    .timeline-progress {
+        display: none;
+    }
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .timeline-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .timeline-line {
+        display: none;
+    }
+    
+    .timeline-progress {
+        display: none;
+    }
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    .timeline-steps {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .timeline-line,
+    .timeline-progress {
+        display: block;
+    }
+}
+
+/* Process section responsive styles */
+.process-section {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Process steps responsive layout */
+@media (min-width: 768px) {
+    .process-section {
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+    }
+    
+    .process-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .process-section {
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+}
+
+/* Process step cards responsive styling */
+.process-step {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .process-step {
+        padding: 1rem;
+    }
+}
+
+/* Details grid responsive layout */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1.5rem;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Header styles */
+  .header {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #111827;
+  }
+
+  .header p {
+    font-size: 1.25rem;
+    color: #4b5563;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+
+  /* Features grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, opacity 0.5s ease;
+  }
+
+  .feature-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 165, 0, 0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .feature-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #FF8C00;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+
+  .feature-description {
+    color: #4b5563;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5rem;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .container {
+      padding: 3rem 1rem;
+    }
+  }
+
+  .process-icon {
+      background: rgba(255, 165, 0, 0.1);
+      border-radius: 0.75rem;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+  }
+
+  .process-icon svg {
+      color: #FF8C00;
+      width: 1.5rem;
+      height: 1.5rem;
+  }
+
+  .process-step.active .process-icon {
+      background: rgba(255, 165, 0, 0.2);
+      border-radius: 0.75rem;
+  }
+
+  .process-step.active .process-icon svg {
+      color: #FF8C00;
+  }
+
+  .dfir .header {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .section-partners {
+    padding: 20px 0;
+    margin-bottom: -20px;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+}

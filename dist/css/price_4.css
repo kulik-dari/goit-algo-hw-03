@@ -1,0 +1,564 @@
+/* Common styles for both sections */
+.section-price, .section-compare {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    border-radius: 6rem;
+    margin: 4rem;
+    
+}
+
+
+/* Pricing Section */
+.section-price {
+    background: linear-gradient(135deg, #e6f3ff, #f79a6b);
+    padding: 5rem 5rem;
+    min-height: 800px;
+}
+
+.price {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+/* Center the main heading */
+#section-price h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+.price header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+
+/* Toggle Switch Styles */
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-switch label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + label {
+    background-color: #2196F3;
+}
+
+input:checked + label:before {
+    transform: translateX(26px);
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.pricing-block {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: calc(33.333% - 1rem);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pricing-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-block.popular {
+    background: #f0f8ff;
+    border: 2px solid #186aff
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #186aff;
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Price Header */
+.price-header h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    color: var(--brand-01);
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-header .price-amount, 
+.price-header .custom-price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-01);
+    margin: 3rem 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-header .price-duration {
+    font-size: 1.1rem;
+    color: var(--text-01);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing-block ul li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-01);
+    margin-bottom: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-header i {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    display: inline-block;
+    border-radius: 100%;
+    transition: all 0.3s ease 0s;
+    color: orange;
+    border: 1px solid #eee;
+}
+
+.pricing-block:hover .price-header i {
+    background-image: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+    border: 1px solid #0060df;
+}
+
+/* Buttons */
+.btn {
+    background: #186aff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 48px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: auto;
+}
+.btn:hover{
+    transform: scale(1.05);
+        box-shadow:  0 0 10px 4px #186aff;
+        color: white;
+}
+.contact-btn{
+    background: #186aff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 48px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* Feature Lists */
+.pricing-block ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+
+.pricing-block li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pricing-block li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+}
+
+/* Comparison Section */
+.section-compare {
+    
+    padding: 4rem 2rem;
+}
+
+.compare-plans {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 4rem;
+    background: linear-gradient(135deg, #e6f3ff, #f79a6b);
+}
+
+.compare-plans h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Comparison Table Styles */
+.section-compare table td:first-child {
+  font-weight: bold;
+  text-align: left;
+}
+
+.section-compare table td:not(:first-child) {
+  text-align: center;
+}
+
+/* Checkmark and Cross Styles */
+#planComparisonTable td.checkmark {
+    color: green;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#planComparisonTable td.crossmark {
+  color: #dc3545;  /* Red */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#planComparisonTable td:first-child {
+  color: #1f2937;  /* Reset color for the first column */
+  font-weight: bold;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+/* Table Header Styles */
+#planComparisonTable thead tr th {
+    font-size: 1.2rem;
+    gap: 20px;
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+/* Price columns padding - only for desktop */
+@media (min-width: 992px) {
+    .second {
+        padding-left: 90px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+   
+    .compare-plans {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    table {
+        min-width: 750px;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    
+    .pricing-block {
+        width: 150%; /* Increased width for mobile */
+        max-width: none; /* Remove max-width constraint */
+    
+    }
+    
+    /* Center price text */
+    .price-header .price-amount {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    /* Adjust toggle for mobile */
+    .toggle {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .toggle span {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    .toggle-switch {
+        margin: 0 0.5rem;
+    }
+    
+    /* Ensure proper spacing on mobile */
+    .pricing-block ul {
+        margin: 1.5rem 0;
+    }
+    
+    .pricing-block li {
+        padding: 0.5rem 0 0.5rem 1.5rem;
+    }
+    
+    /* Adjust button positioning */
+    .btn {
+        width: 100%;
+     
+    }
+    
+}
+    
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .compare-plans {
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    table {
+        min-width: 500px;
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    td:not(:first-child) {
+        text-align: center;
+    }
+   
+}
+
+/* Scrollbar Styles */
+.compare-plans::-webkit-scrollbar {
+    height: 6px;
+}
+
+.compare-plans::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.compare-plans::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* Button Group Styles */
+.btn-group .btn {
+    margin: 0 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-hero {
+    margin-top: 20px;
+}
+
+.btn-circled {
+    border-radius: 25px;
+}
+
+
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: white;
+}
+
+.content-wrapper h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: mono, monospace;
+    position: sticky;
+    top: 40px;
+}
+
+.content-wrapper .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.content-wrapper .faq-item {
+    background: #f7f7f9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.content-wrapper .faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.content-wrapper .faq-question:hover {
+    background: #f0f0f2;
+}
+
+.content-wrapper .faq-question:hover .icon {
+    stroke: #ff6b00; /* Orange color on hover */
+    transform: translateY(2px); /* Slight bounce effect */
+}
+
+.content-wrapper .faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #4a4a4a;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.content-wrapper .faq-answer.active {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+.content-wrapper .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    stroke: currentColor; /* Allows color inheritance */
+}
+
+.content-wrapper .icon.active {
+    transform: rotate(180deg);
+    stroke: #ff6b00; /* Orange color when active */
+}
+
+.content-wrapper .faq-answer p + p {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .content-wrapper h1 {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Contact CyberXYZ for comprehensive cybersecurity solutions for businesses. Get in touch with our security experts for DFIR, Malware Analysis, and Vulnerability services.">
+  <meta name="keywords" content="cybersecurity contact, DFIR services, malware analysis, security consultation, vulnerability assessment">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CyberXYZ">
+  
+  <!-- Open Graph / Social Media Tags -->
+  <meta property="og:title" content="Contact CyberXYZ - Get Expert Cybersecurity Consultation">
+  <meta property="og:description" content="Get in touch with CyberXYZ security experts for DFIR, Malware Analysis, and Vulnerability services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cyberxyz.io/contact.html">
+  <meta property="og:image" content="https://cyberxyz.io/images/og-image.jpg">
+  
+  <title>Contact CyberXYZ - Get Expert Cybersecurity Consultation</title>
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="plugins/bootstrap/bootstrap.min.css" as="style">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="css/contact.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.1/build/css/intlTelInput.css" as="style">
+  
+  <!-- Bootstrap.min css -->
+  <link rel="stylesheet" href="css/typography.css"> 
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/stars.css">
+  <link rel="stylesheet" href="css/contact.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="canonical" href="https://cyberxyz.io/contact.html">
+  
+  <!-- Phone Input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.1/build/css/intlTelInput.css">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your actual Google Analytics ID
+  </script>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://cyberxyz.io/contact.html"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "CyberXYZ",
+      "url": "https://cyberxyz.io",
+      "logo": "https://cyberxyz.io/images/logo.png"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-123-456-7890",
+      "contactType": "customer service",
+      "areaServed": ["US", "CA", "EU", "SA", "UAE"],
+      "availableLanguage": ["English", "Arabic", "German"]
+    },
+    "offers": {
+      "@type": "Offer",
+      "itemOffered": [
+        {
+          "@type": "Service",
+          "name": "DFIR Services",
+          "description": "Digital Forensics and Incident Response services"
+        },
+        {
+          "@type": "Service",
+          "name": "Malware Analysis",
+          "description": "Advanced malware detection and analysis"
+        },
+        {
+          "@type": "Service",
+          "name": "Vulnerability Assessment",
+          "description": "Comprehensive vulnerability scanning and remediation"
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <!-- Privacy Policy Modal Styles -->
+  <style>
+    /* Modal styles */
+    .modal-privacy {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    .modal-privacy-content {
+      position: relative;
+      background-color: #fff;
+      margin: 30px auto;
+      max-width: 900px;
+      width: 95%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-privacy-header {
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      color: white;
+      border-radius: 8px 8px 0 0;
+    }
+    .modal-privacy-header h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: white;
+    }
+    .modal-privacy .close-modal {
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .modal-privacy .close-modal:hover {
+      color: #bdc3c7;
+    }
+    .modal-privacy-body {
+      padding: 20px 30px;
+      overflow-y: auto;
+      flex-grow: 1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-height: calc(90vh - 140px);
+    }
+    .modal-privacy-footer {
+      padding: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #f8f9fa;
+      border-radius: 0 0 8px 8px;
+    }
+    .modal-privacy-submit-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .modal-privacy-submit-btn:hover {
+      background-color: #2980b9;
+    }
+    .modal-privacy h3 {
+      color: #2c3e50;
+      font-size: 20px;
+      margin: 25px 0 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .modal-privacy p {
+      margin: 15px 0;
+      color: #444;
+    }
+    .modal-privacy ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    .modal-privacy li {
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .modal-privacy .highlight {
+      background-color: #f8f9fa;
+      padding: 15px 20px;
+      border-left: 4px solid #3498db;
+      margin: 15px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .modal-privacy .contact-info {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    /* Scrollbar styling */
+    .modal-privacy-body::-webkit-scrollbar {
+      width: 8px;
+    }
+    .modal-privacy-body::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    .modal-privacy-body::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 4px;
+    }
+    .modal-privacy-body::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
+    }
+    @media (max-width: 768px) {
+      .modal-privacy-content {
+        margin: 15px auto;
+        width: 95%;
+      }
+      .modal-privacy-header h2 {
+        font-size: 20px;
+      }
+      .modal-privacy h3 {
+        font-size: 18px;
+      }
+      .modal-privacy-body {
+        padding: 15px;
+      }
+    }
+    .modal-privacy.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .modal-submit-btn:focus,
+    .close-modal:focus {
+      outline: 2px solid #3498db;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Menu Section -->
+  <div class="section-menu"></div>
+  
+  <!-- Main Banner Area -->
+  <section class="section-star">
+    <div class="page-banner-area page-contact" id="page-banner">
+      <div class="overlay dark-overlay"></div>
+      <div class="bg-about-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+      </div>
+      <div class="styleabout">
+        <h1 class="text-white">Connect With Our Experts</h1>
+        <p class="text-white">Get in touch with our cybersecurity specialists for a consultation, demo, or quote.</p>
+        <div class="iconabout">
+          <a href="https://www.linkedin.com/company/cyberxyz/" target="_blank" class="link" aria-label="LinkedIn" onclick="trackSocialClick('LinkedIn')">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" width="20" height="20" />
+          </a>
+          <a href="https://github.com" target="_blank" class="link" aria-label="GitHub" onclick="trackSocialClick('GitHub')">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" width="20" height="20" />
+          </a>
+          <a href="https://twitter.com" target="_blank" class="link" aria-label="Twitter" onclick="trackSocialClick('Twitter')">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" alt="Twitter" width="20" height="20" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Form Section -->
+  <section class="section-padding-contact smaller-contact">
+    <div class="container-contact">
+      <div class="left-column">
+        <h2>Get in touch</h2>
+        <p>Whether you're curious about features, integrations, or cybersecurity solutions — we're ready to answer any and all questions.</p>
+        <p>Submit your request and we will reach out to discuss how CyberXYZ can help secure your business.</p>
+        
+        <div class="contact-details">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><strong>Headquarters:</strong> Vancouver, Canada</p>
+            <p><strong>Email:</strong> info@cyberxyz.io</p>
+            <p><strong>Support:</strong> support@cyberxyz.io</p>
+            <p><strong>Hours:</strong> 24/7 Security Operations</p>
+          </div>
+          
+          <div class="global-offices">
+            <h3>Global Presence</h3>
+            <p>With offices and partners in Canada, United States, Germany, Saudi Arabia, and Ukraine, we provide worldwide security services.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right-column">
+        <form id="contact-form" aria-label="Contact form">
+          <h2>Fill out this form and we'll get back to you shortly</h2>
+          
+          <div class="row">
+            <label><strong>What are you interested in?</strong><span class="required">*</span></label>
+            <div class="interests">
+              <label><input type="checkbox" name="interests" value="DFIR"> DFIR</label>
+              <label><input type="checkbox" name="interests" value="Malware Analysis"> Malware Analysis</label>
+              <label><input type="checkbox" name="interests" value="Vulnerabilities"> Vulnerabilities</label>
+            </div>
+            <span id="interests-error" class="error"></span>
+          </div>
+          
+          <div class="row">
+            <div class="divider"></div>
+          </div>
+          
+          <div class="row">
+            <div>
+              <label for="firstname">First name <span class="required">*</span></label>
+              <input type="text" id="firstname" name="firstname" required placeholder="John">
+            </div>
+            <div>
+              <label for="lastname">Last name <span class="required">*</span></label>
+              <input type="text" id="lastname" name="lastname" required placeholder="Doe">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="full-width">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com">
+              <span id="email-error" class="error"></span>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="form-group phone-container">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="313-000-4444" class="form-control">
+              <span id="phone-error" class="error"></span>
+            </div>
+            <div class="os-container">
+              <label for="os">What is your OS?</label>
+              <select id="os" name="os">
+                <option value="">-- Please select --</option>
+                <option value="Windows">Windows</option>
+                <option value="Windows-Arm">Windows-Arm</option>
+                <option value="MacOS">MacOS</option>
+                <option value="Linux">Linux</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="full-width">
+              <label for="company_size">What is your company size?</label>
+              <select id="company_size" name="company_size">
+                <option value="">Select company size</option>
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="201+">201+ employees</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="full-width">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Your message here..." rows="4"></textarea>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="form-group-privacy">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy" class="privacy-label">
+                By subscribing, I understand and agree that CyberXYZ may contact me as further described in its
+                <a href="#" class="privacy-link" id="privacy-policy-link">Privacy Policy</a>
+              </label>
+            </div>
+          </div>
+          
+          <button type="submit" class="submit-btn" onclick="trackFormSubmit()">SUBMIT</button>
+        </form>
+        
+        <div id="success-message" class="success-message" style="display: none;" aria-live="polite">
+          Your message has been sent successfully! Thank you for contacting us.
+        </div>
+      </div>
+    </div>
+    
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-privacy" aria-modal="true" role="dialog">
+      <div class="modal-privacy-content">
+        <div class="modal-privacy-header">
+          <h2>Privacy Policy</h2>
+          <span class="close-modal" aria-label="Close">&times;</span>
+        </div>
+        <div class="modal-privacy-body">
+          <!-- Introduction -->
+          <h3>1. Introduction and Scope</h3>
+          <p>CyberXYZ Security Inc. ("we," "our," "us," or "the Company"), headquartered in Vancouver, Canada, is committed to protecting the privacy and security of all personal information we process. This comprehensive Privacy Policy outlines our practices for collecting, using, disclosing, and safeguarding information across all our operations, services, and interactions.</p>
+          <div class="highlight">
+            <p>This Privacy Policy applies to:</p>
+            <ul>
+              <li>All services and products provided by CyberXYZ Security Inc.</li>
+              <li>Our website and mobile applications</li>
+              <li>Customer support and communication channels</li>
+              <li>Marketing and business development activities</li>
+              <li>Vendor and partner relationships</li>
+              <li>Employment and recruitment processes</li>
+            </ul>
+          </div>
+          
+          <!-- Information Collection -->
+          <h3>2. Information We Collect</h3>
+          <h4>2.1 Personal Information</h4>
+          <ul>
+            <li>
+              <strong>Basic Information:</strong>
+              <ul>
+                <li>Full name and title</li>
+                <li>Contact information (email, phone, address)</li>
+                <li>Government-issued identification (when required)</li>
+                <li>Date of birth</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Professional Information:</strong>
+              <ul>
+                <li>Company name and position</li>
+                <li>Business contact details</li>
+                <li>Professional credentials</li>
+                <li>Employment history</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Technical Information:</strong>
+              <ul>
+                <li>IP addresses and device identifiers</li>
+                <li>Authentication credentials</li>
+                <li>Security certificates and keys</li>
+                <li>System logs and audit trails</li>
+              </ul>
+            </li>
+          </ul>
+          
+          <h4>2.2 Security and System Data</h4>
+          <div class="highlight">
+            <p>As a cybersecurity company, we may collect:</p>
+            <ul>
+              <li>Security incident data and forensic information</li>
+              <li>Threat intelligence and vulnerability data</li>
+              <li>Network and system configuration details</li>
+              <li>Security assessment results</li>
+              <li>Penetration testing data</li>
+            </ul>
+          </div>
+          
+          <!-- Data Use -->
+          <h3>3. How We Use Your Information</h3>
+          <h4>3.1 Primary Purposes</h4>
+          <ul>
+            <li>Providing cybersecurity services and solutions</li>
+            <li>Detecting and preventing security threats</li>
+            <li>Managing customer relationships and support</li>
+            <li>Processing payments and transactions</li>
+            <li>Maintaining service security and integrity</li>
+          </ul>
+          
+          <h4>3.2 Secondary Purposes</h4>
+          <ul>
+            <li>Improving our services and user experience</li>
+            <li>Conducting research and development</li>
+            <li>Marketing and business development</li>
+            <li>Legal compliance and reporting</li>
+          </ul>
+          
+          <!-- Legal Basis -->
+          <h3>4. Legal Basis for Processing</h3>
+          <div class="highlight">
+            <p>We process personal information based on one or more of the following legal grounds:</p>
+            <ul>
+              <li><strong>Contractual Necessity:</strong> Processing required to fulfill our contractual obligations</li>
+              <li><strong>Legal Obligation:</strong> Processing required to comply with applicable laws</li>
+              <li><strong>Legitimate Interests:</strong> Processing that serves our legitimate business interests</li>
+              <li><strong>Consent:</strong> Processing based on specific, informed consent</li>
+            </ul>
+          </div>
+          
+          <!-- Data Protection -->
+          <h3>5. Data Protection Measures</h3>
+          <h4>5.1 Technical Security Measures</h4>
+          <ul>
+            <li>Advanced encryption for data in transit and at rest</li>
+            <li>Multi-factor authentication systems</li>
+            <li>Regular security audits and penetration testing</li>
+            <li>Intrusion detection and prevention systems</li>
+            <li>24/7 security monitoring and incident response</li>
+          </ul>
+          
+          <h4>5.2 Organizational Security Measures</h4>
+          <ul>
+            <li>Regular employee security training</li>
+            <li>Strict access control policies</li>
+            <li>Data protection impact assessments</li>
+            <li>Vendor security assessments</li>
+            <li>Incident response procedures</li>
+          </ul>
+          
+          <!-- Contact -->
+          <h3>13. Contact Information</h3>
+          <div class="contact-info">
+            <p><strong>CyberXYZ Security Inc.</strong></p>
+            <p>Privacy Office</p>
+            <p>Vancouver, BC</p>
+            <p>Canada</p>
+            <br>
+            <p>Email: privacy@cyberxyz.io</p>
+            <p>Website: https://cyberxyz.io</p>
+          </div>
+        </div>
+        <div class="modal-privacy-footer">
+          <button type="button" class="modal-privacy-submit-btn">Accept Privacy Policy</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer id="footer"></footer>
+  
+  <!-- Essential Scripts -->
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  
+  <!-- Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+  <script src="plugins/google-map/map.js"></script>
+  
+  <!-- Contact Form Scripts -->
+  <script src="js/contact.js"></script>
+  
+  <!-- Main Scripts -->
+  <script src="js/script.js"></script>
+  <script src="components/menu.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/modal.js"></script>
+  
+  <!-- International Telephone Input -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.1/build/js/intlTelInput.min.js"></script>
+  
+  <!-- Google Analytics Event Tracking -->
+  <script>
+    function trackFormSubmit() {
+      gtag('event', 'form_submission', {
+        'event_category': 'Contact',
+        'event_label': 'Contact Form'
+      });
+    }
+    
+    function trackSocialClick(platform) {
+      gtag('event', 'social_click', {
+        'event_category': 'Social Media',
+        'event_label': platform
+      });
+    }
+    
+    // Track page load time
+    window.addEventListener('load', function() {
+      // Check if performance timing is supported
+      if (window.performance) {
+        // Calculate page load time
+        const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        
+        // Send the data to Google Analytics
+        gtag('event', 'page_performance', {
+          'event_category': 'Performance',
+          'event_label': 'Contact Page Load Time',
+          'value': loadTime
+        });
+      }
+    });
+  </script>
+  
+  <!-- Modal Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get required elements
+      const modal = document.getElementById('privacy-modal');
+      const modalContent = modal.querySelector('.modal-privacy-content');
+      const privacyCheckbox = document.getElementById('privacy');
+      const privacyLink = document.getElementById('privacy-policy-link');
+      const closeModalBtn = modal.querySelector('.close-modal');
+      const submitBtn = modal.querySelector('.modal-privacy-submit-btn');
+      
+      // Show modal when Privacy Policy link is clicked
+      privacyLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+      
+      // Close modal when X is clicked
+      closeModalBtn.addEventListener('click', function() {
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 300);
+      });
+      
+      // Close modal when clicking outside the content
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('show');
+          setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }, 300);
+        }
+      });
+      
+      // Accept Privacy Policy
+      submitBtn.addEventListener('click', function() {
+        // Check the privacy checkbox
+        privacyCheckbox.checked = true;
+        // Close the modal with animation
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 300);
+      });
+      
+      // Initialize phone input
+      const phoneInput = document.querySelector("#phone");
+      if (phoneInput) {
+        const iti = window.intlTelInput(phoneInput, {
+          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.1/build/js/utils.js",
+          preferredCountries: ["ca", "us", "sa", "de", "ua"],
+          separateDialCode: true,
+          autoPlaceholder: "polite"
+        });
+      }
+      
+      // Form validation
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Validate interests
+          const interests = document.querySelectorAll('input[name="interests"]:checked');
+          if (interests.length === 0) {
+            document.getElementById('interests-error').textContent = 'Please select at least one interest';
+            return;
+          } else {
+            document.getElementById('interests-error').textContent = '';
+          }
+          
+          // Validate email
+          const email = document.getElementById('email').value;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            document.getElementById('email-error').textContent = 'Please enter a valid email address';
+            return;
+          } else {
+            document.getElementById('email-error').textContent = '';
+          }
+          
+          // Simulate form submission (replace with actual submission)
+          setTimeout(function() {
+            contactForm.style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Track successful submission
+            gtag('event', 'form_submission_success', {
+              'event_category': 'Contact',
+              'event_label': 'Contact Form Success'
+            });
+            
+          }, 1000);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

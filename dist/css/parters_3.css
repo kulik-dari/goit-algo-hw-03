@@ -1,0 +1,176 @@
+
+
+        
+        .section-padding-specialisation{
+            margin-top:60px ;
+            
+          }
+          .section-content {
+            padding: 40px 15px;
+            background-color: #f7f7f7;
+          }
+          
+          .wrap {
+            max-width: 100%;
+            margin: auto;
+            padding: 10px;
+          }
+          
+        
+          .items-wrap {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 10px;
+          }
+          
+          .items-wrap:before, .items-wrap:after {
+            content: "";
+            height: 100%;
+            top: 0;
+            width: 5%;
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+          }
+          
+          .items {
+            flex-shrink: 0;
+            display: flex;
+            gap: 10px;
+            counter-reset: item;
+            justify-content: space-around;
+            min-width: 100%;
+          }
+          
+          /* Item styles */
+          .item {
+            background: #ccc;
+            flex: 0 0 auto;
+            width: 80px;
+            height: 80px;
+            counter-increment: item;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .item:hover {
+            transform: scale(1.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          }
+          
+          .item:before {
+            content: counter(item);
+          }
+          /* Marquee styles */
+          .section-partners .marquee {
+            --gap: 1rem;
+           position: relative;
+           display: flex;
+           overflow: hidden;
+           user-select: none;
+           gap: var(--gap);
+           width: 80%; 
+           margin: 0 auto; 
+           }
+        
+        .section-partners h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2.5rem;
+        }
+        
+        .section-partners .marquee {
+            --gap: 1rem;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: var(--gap);
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .section-partners .marquee__content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: var(--gap);
+            min-width: 100%;
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-100% - var(--gap)));
+            }
+        }
+        
+        .section-partners .marquee--reverse .marquee__content {
+            animation-direction: reverse;
+        }
+        
+        .section-partners .marquee--hover-pause:hover .marquee__content {
+            animation-play-state: paused;
+        }
+        
+        .section-partners .marquee__content img {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .section-partners section {
+            margin-block: 3rem;
+        }
+        
+        .section-partners section > * + * {
+            margin-block-start: 0.5rem;
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .section-partners .marquee {
+                width: 90%;
+            }
+        
+            .section-partners .marquee__content {
+                animation-duration: 15s;
+                gap: 0.5rem;
+            }
+        
+            .section-partners .marquee__content img {
+                width: 100px;
+            }
+        
+            .section-partners h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Ensure smooth scrolling on all devices */
+        @media (prefers-reduced-motion: reduce) {
+            .section-partners .marquee__content {
+                animation-duration: 30s;
+            }
+        }
+        
+        /* High-contrast mode support */
+        @media (forced-colors: active) {
+            .section-partners .marquee__content img {
+                forced-color-adjust: none;
+            }
+        }

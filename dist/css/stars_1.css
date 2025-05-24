@@ -1,0 +1,170 @@
+/* Stars page area */
+/* Banner styles */
+.page-banner-area {
+  position: relative;
+  background: linear-gradient(135deg, #0a1930 0%, #1a365d 100%);
+  color: orange;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  min-height: 300px;
+  max-height: none;
+  z-index: 2;
+  flex-direction: column;
+  border-radius: 0rem 0rem 6rem 6rem;
+  padding: 85px 0 40px 0;
+  margin-top: 70px;
+}
+
+.overlay.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.bg-about-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#stars, #stars2, #stars3, #stars4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.styleabout {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px 20px 20px; /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.styleabout h1 {
+  font-size: 2.5rem;
+  margin-top: 0; /* Reset margin */
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.styleabout p {
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem 0;
+  color: white;
+  max-width: 600px;
+}
+
+.iconabout {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 1.5rem 0; /* Added bottom margin */
+  z-index: 10000;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background-color: rgba(245, 121, 59, 0.3);
+  transform: translateY(-2px);
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.stara {
+  position: absolute;
+  background-color: #FFA500;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 6px 1px rgba(255, 165, 0, 0.5);
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+  50% { opacity: 0.8; transform: scale(1) rotate(180deg); }
+  100% { opacity: 0; transform: scale(0.3) rotate(360deg); }
+}
+
+/* Star animations */
+#stars .stara { animation-duration: 3s; }
+#stars2 .stara { animation-duration: 3.5s; }
+#stars3 .stara { animation-duration: 4s; }
+#stars4 .stara { animation-duration: 4.5s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-banner-area {
+    margin-top: 80px; /* Smaller margin for mobile */
+  }
+}
+  
+  .styleabout {
+      padding: 50px 20px 20px 20px;
+  }
+  
+  .styleabout h1 {
+      font-size: 2rem;
+  }
+  
+  .styleabout p {
+      font-size: 1rem;
+      padding: 0 20px;
+  }
+  
+  .social-icon {
+      width: 40px;
+      height: 40px;
+  }
+  
+  .social-icon img {
+      width: 18px;
+      height: 18px;
+  }
+  
+  .iconabout {
+      gap: 1.5rem;
+  }
+  
+  .stara {
+      box-shadow: 0 0 4px 1px rgba(255, 165, 0, 0.4);
+  }

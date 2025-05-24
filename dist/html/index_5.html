@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="blog-page">
+        <div class="blog-page-new">
+            <div class="blog-grid">
+                <h2>Read our <strong>articles</strong></h2>
+                <div class="marquee-container">
+                    <div class="marquee marquee-left">
+                        <div class="marquee-content" id="marquee-left">
+                            <!-- Blog cards will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="marquee-container">
+                    <div class="marquee marquee-right">
+                        <div class="marquee-content" id="marquee-right">
+                            <!-- Blog cards will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/notionAPI.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Error handling for script loading
+        window.addEventListener('error', function(e) {
+            if (e.filename.endsWith('notionAPI.js')) {
+                console.error('Error loading notionAPI.js:', e.message);
+                document.querySelector('.blog-grid').innerHTML = '<p>Error loading blog data. Please check the console for more information.</p>';
+            }
+        }, true);
+    </script>
+</body>
+</html>

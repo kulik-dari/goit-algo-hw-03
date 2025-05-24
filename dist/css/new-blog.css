@@ -1,0 +1,133 @@
+/* Styles for the new blog page */
+
+.new-blog-section {
+  padding: 150px 0 50px 0; /* Increased top padding for fixed menu, adjust as needed */
+  background-color: #f8f9fa; /* Light background for the section */
+}
+
+.new-blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.new-blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.new-blog-header h2 {
+  font-size: 2.5rem; /* Larger heading */
+  font-weight: 700;
+  color: #333; /* Darker heading color */
+}
+
+.new-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Gap between cards */
+}
+
+.new-blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the link fill the wrapper */
+  height: 100%;
+}
+
+.new-blog-card {
+  background: #ffffff; /* Clean white background */
+  border-radius: 12px; /* Rounded corners like story cards */
+  padding: 2rem; /* Consistent padding */
+  height: 100%; /* Ensure cards in a row have same height */
+  min-height: 350px; /* Ensure consistent height */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  /* Refined, softer shadow like credential items */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 
+              0 4px 8px rgba(0, 0, 0, 0.04), 
+              0 8px 16px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e5e7eb; /* Subtle border for definition */
+  overflow: visible; /* Prevent content from being cut off */
+}
+
+.new-blog-card:hover {
+  transform: translateY(-6px); /* Slightly less lift */
+  /* Gently enhance shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 
+              0 8px 16px rgba(0, 0, 0, 0.05), 
+              0 12px 24px rgba(0, 0, 0, 0.04);
+  background-color: #f8faff; /* Very subtle hover background tint */
+}
+
+.new-blog-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Add industry badge styling for categories */
+.new-blog-card-category {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.new-blog-card-content {
+  flex-grow: 1; /* Allow content to take available space */
+  margin-bottom: 20px;
+}
+
+.new-blog-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151; /* Match credential item h3 color */
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.new-blog-card-excerpt {
+  font-size: 0.95rem;
+  color: #6b7280; /* Match credential item p color */
+  line-height: 1.6;
+}
+
+.new-blog-card-footer {
+  margin-top: auto; /* Push footer to bottom */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.new-blog-card-date {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1.25rem;
+  background: #eef2ff; /* Light blue background */
+  border-radius: 50px; /* Fully rounded corners */
+  color: #4f46e5; /* Indigo text color */
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .new-blog-header h2 {
+    font-size: 2rem;
+  }
+  .new-blog-grid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}

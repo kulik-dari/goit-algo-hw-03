@@ -1,0 +1,873 @@
+/* Responsive CSS Fixes */
+
+/* ===== Global Responsive Fixes ===== */
+:root {
+    --mobile-padding: 1rem;
+    --tablet-padding: 2rem;
+    --desktop-padding: 3rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* ===== Blackhole Section Fixes ===== */
+  .section-blackhole {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  #blackhole {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .banner-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    z-index: 2;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .banner-content h1, 
+  .banner-content h2 {
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-content .highlight {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+  
+  .hero-content p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Fix button alignment and make it responsive */
+  a.btn-outline-dark1 {
+    display: inline-block;
+    padding: clamp(10px, 2vw, 16px) clamp(20px, 4vw, 32px);
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    margin: 0 auto;
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  /* ===== Partners Section Fix ===== */
+  .section-partners {
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  
+  .section-partners .marquee {
+    width: 90%;
+  }
+  
+  .section-partners .marquee__content img {
+    margin: 0 15px;
+    width: clamp(80px, 15vw, 150px);
+    height: clamp(32px, 8vw, 60px);
+  }
+  
+  /* ===== Features Section Fix ===== */
+  .features {
+    background-color: #fde6dd;
+    border-radius: clamp(2rem, 4vw, 6rem);
+    padding: clamp(2rem, 4vw, 4rem);
+    margin: clamp(1rem, 2vw, 2rem) clamp(1rem, 8vw, 8rem) clamp(2rem, 8vw, 8rem);
+  }
+  
+  .features-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 6rem);
+  }
+  
+  .main-title {
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
+    text-align: center;
+  }
+  
+  .newtest {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem) !important;
+    text-align: center;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .feature-card {
+    min-height: auto;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  
+  .feature-card h3 {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+  }
+  
+  .feature-card p, 
+  .feature-card .subheadline {
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+  }
+  
+  /* ===== Stats Section Fix ===== */
+  .stats {
+    margin: 0 clamp(1rem, 4vw, 8rem) clamp(3rem, 6vw, 6rem);
+    padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 2vw, 2rem);
+    border-radius: clamp(2rem, 4vw, 6rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .stat-item h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .stat-item p {
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+  }
+  
+  /* ===== About Section Fix ===== */
+  .section-about2 .container {
+    padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 5vw, 10rem);
+    border-radius: clamp(2rem, 3vw, 6rem);
+    margin: 0 clamp(1rem, 2vw, 2rem);
+  }
+  
+  .centered-text h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: center;
+  }
+  
+  .centered-text p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    text-align: center;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* ===== Modal Fix ===== */
+  .modal-content {
+    width: clamp(300px, 90%, 700px);
+    height: clamp(300px, 90vh, 800px);
+  }
+  
+  /* ===== Menu Fixes ===== */
+  nav#menu {
+    width: clamp(300px, 96%, 1700px);
+    height: clamp(60px, 10vh, 70px);
+  }
+  
+  .navbar-nav {
+    gap: clamp(15px, 2vw, 40px);
+  }
+  
+  .nav-link {
+    font-size: clamp(14px, 1.5vw, 16px);
+    padding: 8px clamp(10px, 1.5vw, 20px);
+  }
+  
+  .btn-outline-dark-menu {
+    font-size: clamp(13px, 1.2vw, 15px);
+    padding: clamp(8px, 1vw, 10px) clamp(15px, 2vw, 24px);
+  }
+  
+  /* ===== Media Queries ===== */
+  @media (min-width: 1200px) {
+    .features-container {
+      flex-direction: row;
+    }
+    
+    .hero-content {
+      text-align: left;
+      flex: 1;
+    }
+    
+    .feature-grid {
+      flex: 2;
+    }
+    
+    .main-title, .newtest {
+      text-align: left;
+    }
+    
+    .feature-card {
+      min-height: 300px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .navbar-nav {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    .nav-item-demo {
+      position: static;
+      margin-top: 1rem;
+    }
+    
+    .feature-card {
+      min-height: auto;
+    }
+    
+    .dropdown {
+      left: 0;
+      min-width: 100%;
+    }
+    
+    .modal-content {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 1rem;
+    }
+    
+    .timeline-item {
+      width: calc(100% - 3rem);
+      margin-left: 3rem !important;
+    }
+    
+    .timeline-logo {
+      left: 1rem;
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      z-index: 10;
+    }
+    
+    .timeline__content-title {
+      position: static;
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      width: 100%;
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      font-size: 1.1rem;
+      padding: 0.75rem 1rem;
+      max-width: 90%;
+    }
+    
+    .section-partners .marquee {
+      width: 95%;
+    }
+    
+    .section-about2 .container {
+      padding: 2rem 1.5rem;
+    }
+    
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    a.btn-outline-dark1 {
+      margin: 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1rem 0;
+    }
+    
+    .modalmain-content {
+      padding: 1.5rem;
+    }
+    
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline-container {
+      padding: 1.5rem 0.75rem;
+      margin: 1rem 0.75rem;
+      border-radius: 1.5rem;
+    }
+    
+    .timeline-item {
+      padding: 1rem;
+      margin-left: 2rem !important;
+      width: calc(100% - 2rem);
+    }
+    
+    .timeline::before {
+      left: 0.5rem;
+    }
+    
+    .timeline-logo {
+      left: 0.5rem;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 1rem;
+      z-index: 10;
+    }
+    
+    .timeline__content-title {
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      max-width: 90%;
+    }
+    
+    .section-partners .marquee__content img {
+      margin: 0 8px;
+      width: 70px;
+      height: 30px;
+    }
+    
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+    
+    .section-blackhole {
+      min-height: 400px;
+    }
+    
+    .features {
+      border-radius: 1.5rem;
+      padding: 1.5rem 1rem;
+      margin: 1rem;
+    }
+    
+    .feature-card {
+      padding: 1.25rem;
+    }
+    
+    .btn-outline-dark1, .btn-outline-dark2 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  /* Fix for footer on mobile */
+  @media (max-width: 768px) {
+    footer {
+      border-radius: 1.5rem 1.5rem 0 0;
+      padding: 1.5rem 1rem;
+    }
+    
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .footer-section {
+      height: auto;
+      min-height: 0;
+      padding: 1rem;
+    }
+    
+    .logo-top {
+      width: 100px;
+      max-width: 100%;
+    }
+    
+    .social {
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  /* Fix for menu overlap on mobile */
+  @media (max-width: 1024px) {
+    nav#menu {
+      height: 60px;
+    }
+    
+    nav#menu #logo {
+      left: 10px;
+    }
+    
+    .menu-toggle {
+      right: 10px;
+    }
+    
+    .navbar-nav.active {
+      padding-top: 80px;
+    }
+    
+    .nav-link {
+      padding: 12px 0;
+    }
+    
+    .dropdown {
+      min-width: 100%;
+      position: static;
+      transform: none;
+      padding: 0;
+      box-shadow: none;
+      background: rgba(245, 245, 245, 0.95);
+    }
+    
+    .left-section, .right-section {
+      padding: 0 1rem;
+    }
+  }
+  
+  /* Fix animation delays on different browsers */
+
+  
+  /* Fix modal display issues */
+  .modal {
+    z-index: 10000;
+  }
+  
+  body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Fix for popup section */
+  .popup-container.active .popup-inside {
+    transform: translate(-50%, -50%) scale(2);
+  }
+  
+  @media (max-width: 768px) {
+    .popup-container.active .popup-inside {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+    
+    .popup {
+      max-height: 500px;
+    }
+    
+    .content {
+      padding: 15px;
+      margin: 10px;
+    }
+  }
+  
+  /* Fix for modalmain content */
+  @media (max-width: 480px) {
+    .modalmain-content {
+      padding: 1rem;
+    }
+    
+    .modalmain-section {
+      padding: 1rem;
+    }
+    
+    .modalmain-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .pricing-tier {
+      padding: 1rem;
+    }
+  }
+  
+  /* Fix layout issues */
+  .section-star, .section-blackhole {
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav#menu {
+    z-index: 1000;
+  }
+  
+  /* Override any !important styles that might cause conflicts */
+  .btn-outline-dark1,
+  .btn-outline-dark2,
+  .btn-filled-dark1,
+  .btn-filled-dark3 {
+    white-space: normal !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+  }
+  
+  @media (max-width: 768px) {
+    a.btn-outline-dark1 {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+
+  /* Layout and Centering Fixes */
+
+/* Logo Size and Positioning Fixes */
+nav#menu #logo {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 0;
+    position: relative;
+    left: 10px;
+  }
+  
+  nav#menu #logo img {
+    height: auto;
+    width: 42px; /* Increased logo size */
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  .logo-svg {
+    height: auto;
+    width: 160px; /* Increased logo text size */
+    margin: 0 0 0 5px;
+    padding: 0;
+  }
+  
+  /* Hero Section Centering Fixes */
+  .section-blackhole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Add space for the fixed menu */
+  }
+  
+  #blackhole {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    width: 90%;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Text Sizing and Wrapping Fixes */
+  .hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 0 0 0.5rem 0;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+  }
+  
+  .hero-content h2.highlight {
+    font-size: clamp(2rem, 4.5vw, 2.5rem);
+    margin: 0 0 1rem 0;
+    color: orange;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  
+  .hero-content p {
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    margin: 0 auto 2rem;
+    max-width: 90%;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+  }
+  
+  /* Button Centering Fix */
+  a.btn-outline-dark1 {
+    margin: 0 auto;
+    padding: 12px 30px;
+    width: auto;
+    max-width: none;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  /* Feature Section Text Centering Fix */
+  .features-container .hero-content {
+    text-align: center;
+    margin: 0 auto 3rem;
+  }
+  
+  .main-title {
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .newtest {
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 90%;
+  }
+  
+  /* Stats Section Centering */
+  .stats {
+    text-align: center;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* About Section Centering */
+  .section-about2 .container {
+    text-align: center;
+  }
+  
+  /* Menu Item Spacing and Positioning */
+  .navbar-nav {
+    justify-content: center;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  
+  .nav-item-demo {
+    position: absolute;
+    right: 20px;
+  }
+  
+  /* Mobile Specific Fixes */
+  @media (max-width: 768px) {
+    .section-blackhole {
+      padding-top: 70px;
+      min-height: 600px;
+    }
+    
+    .banner-content {
+      width: 95%;
+      padding: 0 10px;
+    }
+    
+    .hero-content h1,
+    .hero-content h2.highlight,
+    .hero-content p {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    nav#menu #logo img {
+      width: 36px;
+    }
+    
+    .logo-svg {
+      width: 140px;
+    }
+    
+    a.btn-outline-dark1 {
+      width: 80%;
+      max-width: 250px;
+    }
+  }
+  
+  /* Fix for extremely small screens */
+  @media (max-width: 360px) {
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-content h2.highlight {
+      font-size: 1.7rem;
+    }
+    
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+    
+    nav#menu #logo img {
+      width: 32px;
+    }
+    
+    .logo-svg {
+      width: 120px;
+    }
+  }
+  
+  /* Desktop Enhancement */
+  @media (min-width: 1200px) {
+    .banner-content {
+      max-width: 900px;
+    }
+    
+    .hero-content {
+      max-width: 700px;
+    }
+    
+    .hero-content h1 {
+      font-size: 3.5rem;
+    }
+    
+    .hero-content h2.highlight {
+      font-size: 2.5rem;
+    }
+    
+    nav#menu #logo img {
+      width: 48px;
+    }
+    
+    .logo-svg {
+      width: 180px;
+    }
+  }
+  
+  /* Fix for navbar in desktop view */
+  @media (min-width: 1025px) {
+    .navbar-nav {
+      margin-left: 220px;
+      margin-right: 200px;
+    }
+  }
+  
+  /* Blackhole Animation Fix */
+  #blackhole canvas {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .centerHover {
+    z-index: 2;
+  }
+  
+  /* Make sure all text is visible in timeline section */
+  .timeline__content-desc {
+    overflow: visible;
+    white-space: normal;
+  }
+  
+  .feature-item {
+    white-space: normal;
+    text-align: left;
+  }
+  
+  /* Ensure the timeline logo is properly centered */
+  .timeline-logo {
+    transform: translateX(-50%);
+  }
+  
+  /* Ensure buttons are properly centered */
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem auto 0;
+  }
+  
+  button.btn-outline-dark1,
+  button.btn-outline-dark2,
+  button.btn-filled-dark1,
+  button.btn-filled-dark3 {
+    margin: 0 auto;
+    width: auto;
+  }
+  
+  /* Make Get Started button more visually apparent */
+  a.btn-outline-dark1[href="#fortress-section"],
+  .timeline-container .btn-outline-dark1 {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    max-width: 200px;
+    text-align: center;
+    padding: 12px 30px;
+    margin: 1rem auto;
+  }
+  
+  a.btn-outline-dark1[href="#fortress-section"]:hover,
+  .timeline-container .btn-outline-dark1:hover {
+    background-color: rgba(255, 150, 0, 0.7);
+    border-color: orange;
+    transform: translateY(-3px);
+  }

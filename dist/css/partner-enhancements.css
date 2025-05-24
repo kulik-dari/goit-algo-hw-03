@@ -1,0 +1,77 @@
+/* Partner Section Enhancements */
+
+/* Make partner icons container larger */
+.partner-icons-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 4rem 5rem !important; /* Increased spacing */
+  max-width: 1000px !important; /* Wider container */
+  margin: 3rem auto 0 auto !important;
+}
+
+/* Make partner items larger */
+.partner-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  transition: transform 0.3s ease !important;
+}
+
+.partner-item img {
+  height: 60px !important; /* Larger icons */
+  width: auto !important;
+  max-width: 140px !important;
+  object-fit: contain !important;
+  margin-bottom: 1rem !important;
+}
+
+.partner-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #4b5563 !important;
+}
+
+/* Update the Trusted Security Partner title */
+.trusted-partners .section-title {
+  font-size: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  position: relative !important;
+}
+
+.trusted-partners .section-title::after {
+  content: 'Top Security Compliance Standards' !important;
+  display: block !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  color: #4b5563 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Fix resource icon positioning */
+.resource-icon {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 70px !important;
+  height: 70px !important;
+  margin-bottom: 1.5rem !important;
+  color: #3b82f6 !important;
+}
+
+.resource-icon::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-radius: 50% !important;
+  z-index: -1 !important;
+}
+
+.resource-icon i {
+  font-size: 1.75rem !important;
+}
